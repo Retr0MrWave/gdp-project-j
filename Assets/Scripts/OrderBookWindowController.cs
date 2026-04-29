@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,25 +28,13 @@ public class OrderBookWindowController : MonoBehaviour
     [Tooltip("How many snapshots to move per wheel notch.")]
     public int scrollStep = 10;
 
-    [Min(0.001f)]
-    [Tooltip("Ignore tiny scroll values below this threshold.")]
-    public float scrollDeadzone = 0.01f;
-
     [Header("Live Mode")]
     public bool followTailIfLive = false;
 
     private readonly List<OrderBookSnapshot> _buffer = new List<OrderBookSnapshot>();
-    private float _pendingScrollY = 0f;
-
-    private void OnEnable()
-    {
-        EnableScrollAction();
-    }
-
-    private void OnDisable()
-    {
-        DisableScrollAction();
-    }
+    private const float TICK_TIME = 0.5f;
+    private const int STEP_SIZE = 1;
+    private float timeDelta = 0f; 
 
     private void Start()
     {
@@ -77,16 +66,12 @@ public class OrderBookWindowController : MonoBehaviour
             }
         }
 
-        if (Mathf.Abs(_pendingScrollY) > scrollDeadzone)
+        timeDelta += Time.deltaTime;
+
+        if (timeDelta >= TICK_TIME)
         {
-            float scrollY = _pendingScrollY;
-            _pendingScrollY = 0f;
-
-            int direction = scrollY > 0f ? -1 : 1;
-            if (invertScrollDirection)
-                direction *= -1;
-
-            ScrollBy(direction * scrollStep);
+            timeDelta -= TICK_TIME;
+            ScrollBy(STEP_SIZE);
         }
     }
 
@@ -159,30 +144,5 @@ public class OrderBookWindowController : MonoBehaviour
             return;
 
         JumpToIndex(Mathf.Max(0, source.Count - windowSize));
-    }
-
-    private void EnableScrollAction()
-    {
-        if (scrollAction == null || scrollAction.action == null)
-            return;
-
-        scrollAction.action.performed -= OnScrollPerformed;
-        scrollAction.action.performed += OnScrollPerformed;
-        scrollAction.action.Enable();
-    }
-
-    private void DisableScrollAction()
-    {
-        if (scrollAction == null || scrollAction.action == null)
-            return;
-
-        scrollAction.action.performed -= OnScrollPerformed;
-        scrollAction.action.Disable();
-    }
-
-    private void OnScrollPerformed(InputAction.CallbackContext context)
-    {
-        Vector2 scroll = context.ReadValue<Vector2>();
-        _pendingScrollY += scroll.y;
     }
 }
