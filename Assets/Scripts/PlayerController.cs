@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public OrderBookWindowController controller;
     private Rigidbody _rb;
     public InputActionReference moveActionReference;
     private InputAction _moveAction;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (controller.IsMeshReady() == false)
+            return;
         Vector2 rotationDirection = _moveAction.ReadValue<Vector2>() * rotationFactor;
         Quaternion rotationTo = Quaternion.Euler(-rotationDirection.y, -90, -rotationDirection.x);
 

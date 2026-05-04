@@ -48,7 +48,7 @@ public class OrderBookWindowController : MonoBehaviour
 
         if (source == null || renderer == null)
             return;
-        if (startIndex + windowSize >= source.Count)
+        if (IsMeshReady() == false)
             return;
         if (followTailIfLive && source.IsLive)
         {
@@ -67,6 +67,11 @@ public class OrderBookWindowController : MonoBehaviour
             timeDelta -= secondsPerTick;
             ScrollBy(stepSize);
         }
+    }
+
+    public bool IsMeshReady()
+    {
+        return (startIndex + windowSize < source.Count);
     }
 
     [ContextMenu("Refresh Window")]
