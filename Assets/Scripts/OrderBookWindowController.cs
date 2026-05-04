@@ -17,24 +17,17 @@ public class OrderBookWindowController : MonoBehaviour
     public bool refreshSourceOnStart = true;
     public bool loadWindowOnStart = true;
 
-    [Header("Input System")]
-    [Tooltip("Bind this to an Input System action, e.g. a Value/Vector2 action bound to <Mouse>/scroll.")]
-    public InputActionReference scrollAction;
-
-    [Tooltip("If true, interpret positive wheel input as scrolling backward in history.")]
-    public bool invertScrollDirection = false;
-
-    [Min(1)]
-    [Tooltip("How many snapshots to move per wheel notch.")]
-    public int scrollStep = 10;
 
     [Header("Live Mode")]
     public bool followTailIfLive = false;
+    
+    [Header("Scrolling Properties")]
+    public float secondsPerTick = 0.5f;
+    public int stepSize = 1;
+    private float timeDelta = 0f; 
 
     private readonly List<OrderBookSnapshot> _buffer = new List<OrderBookSnapshot>();
-    private const float TICK_TIME = 0.5f;
-    private const int STEP_SIZE = 1;
-    private float timeDelta = 0f; 
+
 
     private void Start()
     {
@@ -68,10 +61,10 @@ public class OrderBookWindowController : MonoBehaviour
 
         timeDelta += Time.deltaTime;
 
-        if (timeDelta >= TICK_TIME)
+        if (timeDelta >= secondsPerTick)
         {
-            timeDelta -= TICK_TIME;
-            ScrollBy(STEP_SIZE);
+            timeDelta -= secondsPerTick;
+            ScrollBy(stepSize);
         }
     }
 
