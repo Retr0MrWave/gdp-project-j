@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 102
+  controlID: 49
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: Window
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -69,14 +69,14 @@ MonoBehaviour:
     y: 0
     width: 361.59998
     height: 716.8
-  m_MinSize: {x: 276, y: 76}
+  m_MinSize: {x: 51, y: 76}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 15}
   - {fileID: 12}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 103
+  controlID: 50
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 104
+  controlID: 40
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -301,8 +301,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Git for Unity\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1174.4
-    y: 79.200005
+    x: 1175.4
+    y: 24
     width: 360.59998
     height: 690.8
   m_SerializedDataModeController:
@@ -321,10 +321,10 @@ MonoBehaviour:
   progressMessageClearTime: -1
   notificationClearTime: -1
   timeSinceLastRotation: -1
-  currentBranchAndRemoteHasUpdate: 1
-  currentTrackingStatusHasUpdate: 1
-  currentStatusEntriesHasUpdate: 1
-  repositoryProgressHasUpdate: 1
+  currentBranchAndRemoteHasUpdate: 0
+  currentTrackingStatusHasUpdate: 0
+  currentStatusEntriesHasUpdate: 0
+  repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 0
   changeTab: 4
   activeTab: 4
@@ -370,8 +370,38 @@ MonoBehaviour:
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
+      - path: master
+        label: master
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: orderbook-controller
+        label: orderbook-controller
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
       - path: orderbook-visualisation
         label: orderbook-visualisation
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: UI-development
+        label: UI-development
         level: 1
         isFolder: 0
         isContainer: 0
@@ -381,14 +411,14 @@ MonoBehaviour:
         treeIsCheckable: 0
         checkState: 0
       selectedNode:
-        path: 
-        label: 
-        level: 0
+        path: UI-development
+        label: UI-development
+        level: 1
         isFolder: 0
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
-        isActive: 0
+        isActive: 1
         treeIsCheckable: 0
         checkState: 0
     treeRemotes:
@@ -447,8 +477,28 @@ MonoBehaviour:
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
+      - path: origin/HEAD
+        label: HEAD
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
       - path: origin/master
         label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/orderbook-controller
+        label: orderbook-controller
         level: 2
         isFolder: 0
         isContainer: 0
@@ -482,7 +532,7 @@ MonoBehaviour:
     newBranchName: 
     scroll: {x: 0, y: 0}
     disableDelete: 1
-    disableCreate: 1
+    disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 2
@@ -490,8 +540,8 @@ MonoBehaviour:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 1
     currentBranch:
-      name: orderbook-visualisation
-      tracking: origin/orderbook-visualisation
+      name: UI-development
+      tracking: 
     currentRemote:
       name: origin
       url: https://github.com/Retr0MrWave/gdp-project-j.git
@@ -501,10 +551,20 @@ MonoBehaviour:
       function: 0
       token: 
     localBranches:
+    - name: master
+      tracking: origin/master
+    - name: orderbook-controller
+      tracking: origin/orderbook-controller
     - name: orderbook-visualisation
       tracking: origin/orderbook-visualisation
+    - name: UI-development
+      tracking: 
     remoteBranches:
+    - name: origin/HEAD
+      tracking: '[None]'
     - name: origin/master
+      tracking: '[None]'
+    - name: origin/orderbook-controller
       tracking: '[None]'
     - name: origin/orderbook-visualisation
       tracking: '[None]'
@@ -514,8 +574,8 @@ MonoBehaviour:
     currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
-    currentBranch: master
-    treeScroll: {x: 0, y: 53.500366}
+    currentBranch: orderbook-controller
+    treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
         keys: []
@@ -573,29 +633,831 @@ MonoBehaviour:
     gitStatusEntries: []
     changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2026-04-28T15:57:19.487+01:00
+      updatedTimeString: 2026-05-02T16:02:28.611+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2026-04-28T15:57:51.295+01:00
+      updatedTimeString: 2026-05-02T16:03:00.500+01:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2026-04-28T15:56:41.017+01:00
+      updatedTimeString: 2026-05-02T16:02:29.053+01:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
     currentTrackingStatusHasUpdate: 0
     logEntries:
-    - commitID: f4b4bdfb1e3d5a9b1907a91afd8fb6c083a7b31a
+    - commitID: 7de67c48cfbfa45121645a098c081544156171f2
       mergeA: 
       mergeB: 
       authorName: Totem-101
       authorEmail: sundaychau0427@gmail.com
       commitEmail: sundaychau0427@gmail.com
       commitName: Totem-101
+      summary: Nope
+      description: 
+      timeString: 2026-05-02T16:02:59.000+01:00
+      commitTimeString: 2026-05-02T16:02:59.000+01:00
+      changes:
+      - path: .vsconfig
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vsconfig
+        projectPath: .vsconfig
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-6000.dwlt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+        projectPath: UserSettings\Layouts\default-6000.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 182384bc681f520e9ced95c05ebdf30dd14817b7
+      mergeA: 
+      mergeB: 
+      authorName: abcdehello
+      authorEmail: dickson.hoho2@gmail.com
+      commitEmail: dickson.hoho2@gmail.com
+      commitName: abcdehello
+      summary: Mesh Autoupdate
+      description: 'Updated OrderBookWindowController for autoscrolling of the mesh;
+
+        The
+        mesh sometimes shifts up and down due to mid-price fluctuation; should be
+        fixable by disabling "Center on Mid Price" on OrderBookCavern'
+      timeString: 2026-04-29T20:29:33.000+01:00
+      commitTimeString: 2026-04-29T20:29:33.000+01:00
+      changes:
+      - path: Assets\Scripts\OrderBookWindowController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+        projectPath: Assets\Scripts\OrderBookWindowController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: fdc5acdcbac721ee7bf325051d479fbb2ec15ea0
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Add textures to the surfaces
+      description: 
+      timeString: 2026-04-28T16:47:04.000+01:00
+      commitTimeString: 2026-04-28T16:47:04.000+01:00
+      changes:
+      - path: Assets\Materials\Green.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Green.mat
+        projectPath: Assets\Materials\Green.mat
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Materials\Red.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat
+        projectPath: Assets\Materials\Red.mat
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Settings\DefaultVolumeProfile.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\DefaultVolumeProfile.asset
+        projectPath: Assets\Settings\DefaultVolumeProfile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Settings\SampleSceneProfile.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset
+        projectPath: Assets\Settings\SampleSceneProfile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures.meta
+        projectPath: Assets\Textures.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_green.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png
+        projectPath: Assets\Textures\texture_green.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_green.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png.meta
+        projectPath: Assets\Textures\texture_green.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_red.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png
+        projectPath: Assets\Textures\texture_red.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_red.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png.meta
+        projectPath: Assets\Textures\texture_red.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 31ceb2f540c97e2c887d10873b524a99a5955547
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Refactor renderer to have controllable input by script
+      description: 
+      timeString: 2026-04-13T17:44:45.000+01:00
+      commitTimeString: 2026-04-13T17:44:45.000+01:00
+      changes:
+      - path: Assets\InputSystem_Actions.inputactions
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\InputSystem_Actions.inputactions
+        projectPath: Assets\InputSystem_Actions.inputactions
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Materials\Green.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Green.mat
+        projectPath: Assets\Materials\Green.mat
+        originalPath: Assets\Materials\Blue.mat
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Materials\Green.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Green.mat.meta
+        projectPath: Assets\Materials\Green.mat.meta
+        originalPath: Assets\Materials\Blue.mat.meta
+        indexStatus: 6
+        workTreeStatus: 0
+      - path: Assets\Materials\Red.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat
+        projectPath: Assets\Materials\Red.mat
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+        projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\JsonlOrderBookFileSource.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs.meta
+        projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\JsonlOrderBookParser.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookParser.cs
+        projectPath: Assets\Scripts\JsonlOrderBookParser.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\JsonlOrderBookParser.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookParser.cs.meta
+        projectPath: Assets\Scripts\JsonlOrderBookParser.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryRenderer.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
+        projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryRenderer.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs.meta
+        projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryVisualizer.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs
+        projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+        projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+        originalPath: 
+        indexStatus: 5
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookSnapshot.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSnapshot.cs
+        projectPath: Assets\Scripts\OrderBookSnapshot.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookSnapshot.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSnapshot.cs.meta
+        projectPath: Assets\Scripts\OrderBookSnapshot.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookSourceBehaviour.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSourceBehaviour.cs
+        projectPath: Assets\Scripts\OrderBookSourceBehaviour.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookSourceBehaviour.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSourceBehaviour.cs.meta
+        projectPath: Assets\Scripts\OrderBookSourceBehaviour.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookWindowController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+        projectPath: Assets\Scripts\OrderBookWindowController.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookWindowController.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs.meta
+        projectPath: Assets\Scripts\OrderBookWindowController.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StreamingAssets.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets.meta
+        projectPath: Assets\StreamingAssets.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StreamingAssets\ethusdt_1h.jsonl
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_1h.jsonl
+        projectPath: Assets\StreamingAssets\ethusdt_1h.jsonl
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\StreamingAssets\ethusdt_1h.jsonl.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_1h.jsonl.meta
+        projectPath: Assets\StreamingAssets\ethusdt_1h.jsonl.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 69ca5c67c87d3b7a361a4d6a07bfdebe17002b36
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Add prototype orderbook history rendering
+      description: 
+      timeString: 2026-04-04T20:35:05.000+01:00
+      commitTimeString: 2026-04-04T20:35:05.000+01:00
+      changes:
+      - path: Assets\FinanceData.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData.meta
+        projectPath: Assets\FinanceData.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\FinanceData\binance_orderbook_sampler.py
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\binance_orderbook_sampler.py
+        projectPath: Assets\FinanceData\binance_orderbook_sampler.py
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\FinanceData\binance_orderbook_sampler.py.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\binance_orderbook_sampler.py.meta
+        projectPath: Assets\FinanceData\binance_orderbook_sampler.py.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\FinanceData\ethusdt_10s.txt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_10s.txt
+        projectPath: Assets\FinanceData\ethusdt_10s.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\FinanceData\ethusdt_10s.txt.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_10s.txt.meta
+        projectPath: Assets\FinanceData\ethusdt_10s.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\FinanceData\ethusdt_1h.txt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_1h.txt
+        projectPath: Assets\FinanceData\ethusdt_1h.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\FinanceData\ethusdt_1h.txt.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_1h.txt.meta
+        projectPath: Assets\FinanceData\ethusdt_1h.txt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials.meta
+        projectPath: Assets\Materials.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Blue.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Blue.mat
+        projectPath: Assets\Materials\Blue.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Blue.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Blue.mat.meta
+        projectPath: Assets\Materials\Blue.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Red.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat
+        projectPath: Assets\Materials\Red.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Red.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat.meta
+        projectPath: Assets\Materials\Red.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts.meta
+        projectPath: Assets\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryVisualizer.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs
+        projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+        projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Mobile_RPAsset.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_RPAsset.asset
+        projectPath: Assets\Settings\Mobile_RPAsset.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Settings\SampleSceneProfile.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset
+        projectPath: Assets\Settings\SampleSceneProfile.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 85d4943f3bf5b39319e2f2c47557d54b2469e504
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Add 3D template files
+      description: 
+      timeString: 2026-03-20T01:06:41.000+00:00
+      commitTimeString: 2026-03-20T01:06:41.000+00:00
+      changes:
+      - path: .vscode\extensions.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\extensions.json
+        projectPath: .vscode\extensions.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .vscode\launch.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\launch.json
+        projectPath: .vscode\launch.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: .vscode\settings.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+        projectPath: .vscode\settings.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\InputSystem_Actions.inputactions
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\InputSystem_Actions.inputactions
+        projectPath: Assets\InputSystem_Actions.inputactions
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\InputSystem_Actions.inputactions.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\InputSystem_Actions.inputactions.meta
+        projectPath: Assets\InputSystem_Actions.inputactions.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Readme.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Readme.asset
+        projectPath: Assets\Readme.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Readme.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Readme.asset.meta
+        projectPath: Assets\Readme.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes.meta
+        projectPath: Assets\Scenes.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity.meta
+        projectPath: Assets\Scenes\SampleScene.unity.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings.meta
+        projectPath: Assets\Settings.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\DefaultVolumeProfile.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\DefaultVolumeProfile.asset
+        projectPath: Assets\Settings\DefaultVolumeProfile.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\DefaultVolumeProfile.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\DefaultVolumeProfile.asset.meta
+        projectPath: Assets\Settings\DefaultVolumeProfile.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Mobile_RPAsset.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_RPAsset.asset
+        projectPath: Assets\Settings\Mobile_RPAsset.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Mobile_RPAsset.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_RPAsset.asset.meta
+        projectPath: Assets\Settings\Mobile_RPAsset.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Mobile_Renderer.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_Renderer.asset
+        projectPath: Assets\Settings\Mobile_Renderer.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\Mobile_Renderer.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_Renderer.asset.meta
+        projectPath: Assets\Settings\Mobile_Renderer.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\PC_RPAsset.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_RPAsset.asset
+        projectPath: Assets\Settings\PC_RPAsset.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\PC_RPAsset.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_RPAsset.asset.meta
+        projectPath: Assets\Settings\PC_RPAsset.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\PC_Renderer.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_Renderer.asset
+        projectPath: Assets\Settings\PC_Renderer.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\PC_Renderer.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_Renderer.asset.meta
+        projectPath: Assets\Settings\PC_Renderer.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\SampleSceneProfile.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset
+        projectPath: Assets\Settings\SampleSceneProfile.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\SampleSceneProfile.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset.meta
+        projectPath: Assets\Settings\SampleSceneProfile.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+        projectPath: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\UniversalRenderPipelineGlobalSettings.asset.meta
+        projectPath: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo.meta
+        projectPath: Assets\TutorialInfo.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Icons.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Icons.meta
+        projectPath: Assets\TutorialInfo\Icons.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Icons\URP.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Icons\URP.png
+        projectPath: Assets\TutorialInfo\Icons\URP.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Icons\URP.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Icons\URP.png.meta
+        projectPath: Assets\TutorialInfo\Icons\URP.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Layout.wlt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Layout.wlt
+        projectPath: Assets\TutorialInfo\Layout.wlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Layout.wlt.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Layout.wlt.meta
+        projectPath: Assets\TutorialInfo\Layout.wlt.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts.meta
+        projectPath: Assets\TutorialInfo\Scripts.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Editor.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Editor.meta
+        projectPath: Assets\TutorialInfo\Scripts\Editor.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+        projectPath: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs.meta
+        projectPath: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Readme.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Readme.cs
+        projectPath: Assets\TutorialInfo\Scripts\Readme.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TutorialInfo\Scripts\Readme.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Readme.cs.meta
+        projectPath: Assets\TutorialInfo\Scripts\Readme.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\manifest.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Packages\manifest.json
+        projectPath: Packages\manifest.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Packages\packages-lock.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Packages\packages-lock.json
+        projectPath: Packages\packages-lock.json
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\AudioManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\AudioManager.asset
+        projectPath: ProjectSettings\AudioManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ClusterInputManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ClusterInputManager.asset
+        projectPath: ProjectSettings\ClusterInputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\DynamicsManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\DynamicsManager.asset
+        projectPath: ProjectSettings\DynamicsManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorBuildSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\EditorBuildSettings.asset
+        projectPath: ProjectSettings\EditorBuildSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\EditorSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\EditorSettings.asset
+        projectPath: ProjectSettings\EditorSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\GraphicsSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\GraphicsSettings.asset
+        projectPath: ProjectSettings\GraphicsSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\InputManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\InputManager.asset
+        projectPath: ProjectSettings\InputManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MemorySettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\MemorySettings.asset
+        projectPath: ProjectSettings\MemorySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\MultiplayerManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\MultiplayerManager.asset
+        projectPath: ProjectSettings\MultiplayerManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\NavMeshAreas.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\NavMeshAreas.asset
+        projectPath: ProjectSettings\NavMeshAreas.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PackageManagerSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\PackageManagerSettings.asset
+        projectPath: ProjectSettings\PackageManagerSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\Physics2DSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\Physics2DSettings.asset
+        projectPath: ProjectSettings\Physics2DSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\PresetManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\PresetManager.asset
+        projectPath: ProjectSettings\PresetManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ProjectSettings.asset
+        projectPath: ProjectSettings\ProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ProjectVersion.txt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ProjectVersion.txt
+        projectPath: ProjectSettings\ProjectVersion.txt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\QualitySettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\QualitySettings.asset
+        projectPath: ProjectSettings\QualitySettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\ShaderGraphSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ShaderGraphSettings.asset
+        projectPath: ProjectSettings\ShaderGraphSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TagManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\TagManager.asset
+        projectPath: ProjectSettings\TagManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\TimeManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\TimeManager.asset
+        projectPath: ProjectSettings\TimeManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\URPProjectSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\URPProjectSettings.asset
+        projectPath: ProjectSettings\URPProjectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\UnityConnectSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\UnityConnectSettings.asset
+        projectPath: ProjectSettings\UnityConnectSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VFXManager.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\VFXManager.asset
+        projectPath: ProjectSettings\VFXManager.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\VersionControlSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\VersionControlSettings.asset
+        projectPath: ProjectSettings\VersionControlSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: ProjectSettings\XRSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\XRSettings.asset
+        projectPath: ProjectSettings\XRSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\EditorUserSettings.asset
+        projectPath: UserSettings\EditorUserSettings.asset
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Layouts\default-6000.dwlt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+        projectPath: UserSettings\Layouts\default-6000.dwlt
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.index
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Search.index
+        projectPath: UserSettings\Search.index
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: UserSettings\Search.settings
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Search.settings
+        projectPath: UserSettings\Search.settings
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: gdp-project-j.slnx
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j.slnx
+        projectPath: gdp-project-j.slnx
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 712f1c0d920f4a7da0ba25c84e1a005ba539927a
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
       summary: Initial commit
       description: 
-      timeString: 2026-04-28T15:56:39.000+01:00
-      commitTimeString: 2026-04-28T15:56:39.000+01:00
+      timeString: 2026-03-20T01:04:48.000+00:00
+      commitTimeString: 2026-03-20T01:04:48.000+00:00
       changes:
       - path: .gitattributes
         fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.gitattributes
@@ -615,27 +1477,829 @@ MonoBehaviour:
         originalPath: 
         indexStatus: 4
         workTreeStatus: 0
-    statusAhead: 0
+    statusAhead: 1
     lastLogChangedEvent:
-      updatedTimeString: 2026-04-28T15:56:40.758+01:00
+      updatedTimeString: 2026-05-02T16:03:00.517+01:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2026-04-28T15:56:40.487+01:00
+      updatedTimeString: 2026-05-02T16:03:00.509+01:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
-      - commitID: f4b4bdfb1e3d5a9b1907a91afd8fb6c083a7b31a
+      - commitID: 7de67c48cfbfa45121645a098c081544156171f2
         mergeA: 
         mergeB: 
         authorName: Totem-101
         authorEmail: sundaychau0427@gmail.com
         commitEmail: sundaychau0427@gmail.com
         commitName: Totem-101
+        summary: Nope
+        description: 
+        timeString: 2026-05-02T16:02:59.000+01:00
+        commitTimeString: 2026-05-02T16:02:59.000+01:00
+        changes:
+        - path: .vsconfig
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vsconfig
+          projectPath: .vsconfig
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-6000.dwlt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+          projectPath: UserSettings\Layouts\default-6000.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 182384bc681f520e9ced95c05ebdf30dd14817b7
+        mergeA: 
+        mergeB: 
+        authorName: abcdehello
+        authorEmail: dickson.hoho2@gmail.com
+        commitEmail: dickson.hoho2@gmail.com
+        commitName: abcdehello
+        summary: Mesh Autoupdate
+        description: 'Updated OrderBookWindowController for autoscrolling of the
+          mesh;
+
+          The mesh sometimes shifts up and down due to mid-price
+          fluctuation; should be fixable by disabling "Center on Mid Price" on OrderBookCavern'
+        timeString: 2026-04-29T20:29:33.000+01:00
+        commitTimeString: 2026-04-29T20:29:33.000+01:00
+        changes:
+        - path: Assets\Scripts\OrderBookWindowController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+          projectPath: Assets\Scripts\OrderBookWindowController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: fdc5acdcbac721ee7bf325051d479fbb2ec15ea0
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Add textures to the surfaces
+        description: 
+        timeString: 2026-04-28T16:47:04.000+01:00
+        commitTimeString: 2026-04-28T16:47:04.000+01:00
+        changes:
+        - path: Assets\Materials\Green.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Green.mat
+          projectPath: Assets\Materials\Green.mat
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Materials\Red.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat
+          projectPath: Assets\Materials\Red.mat
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Settings\DefaultVolumeProfile.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\DefaultVolumeProfile.asset
+          projectPath: Assets\Settings\DefaultVolumeProfile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Settings\SampleSceneProfile.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset
+          projectPath: Assets\Settings\SampleSceneProfile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures.meta
+          projectPath: Assets\Textures.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_green.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png
+          projectPath: Assets\Textures\texture_green.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_green.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png.meta
+          projectPath: Assets\Textures\texture_green.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_red.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png
+          projectPath: Assets\Textures\texture_red.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_red.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png.meta
+          projectPath: Assets\Textures\texture_red.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 31ceb2f540c97e2c887d10873b524a99a5955547
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Refactor renderer to have controllable input by script
+        description: 
+        timeString: 2026-04-13T17:44:45.000+01:00
+        commitTimeString: 2026-04-13T17:44:45.000+01:00
+        changes:
+        - path: Assets\InputSystem_Actions.inputactions
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\InputSystem_Actions.inputactions
+          projectPath: Assets\InputSystem_Actions.inputactions
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Materials\Green.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Green.mat
+          projectPath: Assets\Materials\Green.mat
+          originalPath: Assets\Materials\Blue.mat
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Materials\Green.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Green.mat.meta
+          projectPath: Assets\Materials\Green.mat.meta
+          originalPath: Assets\Materials\Blue.mat.meta
+          indexStatus: 6
+          workTreeStatus: 0
+        - path: Assets\Materials\Red.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat
+          projectPath: Assets\Materials\Red.mat
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+          projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\JsonlOrderBookFileSource.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs.meta
+          projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\JsonlOrderBookParser.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookParser.cs
+          projectPath: Assets\Scripts\JsonlOrderBookParser.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\JsonlOrderBookParser.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookParser.cs.meta
+          projectPath: Assets\Scripts\JsonlOrderBookParser.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryRenderer.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
+          projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryRenderer.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs.meta
+          projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryVisualizer.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs
+          projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+          projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+          originalPath: 
+          indexStatus: 5
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookSnapshot.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSnapshot.cs
+          projectPath: Assets\Scripts\OrderBookSnapshot.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookSnapshot.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSnapshot.cs.meta
+          projectPath: Assets\Scripts\OrderBookSnapshot.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookSourceBehaviour.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSourceBehaviour.cs
+          projectPath: Assets\Scripts\OrderBookSourceBehaviour.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookSourceBehaviour.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookSourceBehaviour.cs.meta
+          projectPath: Assets\Scripts\OrderBookSourceBehaviour.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookWindowController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+          projectPath: Assets\Scripts\OrderBookWindowController.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookWindowController.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs.meta
+          projectPath: Assets\Scripts\OrderBookWindowController.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StreamingAssets.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets.meta
+          projectPath: Assets\StreamingAssets.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StreamingAssets\ethusdt_1h.jsonl
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_1h.jsonl
+          projectPath: Assets\StreamingAssets\ethusdt_1h.jsonl
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\StreamingAssets\ethusdt_1h.jsonl.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_1h.jsonl.meta
+          projectPath: Assets\StreamingAssets\ethusdt_1h.jsonl.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 69ca5c67c87d3b7a361a4d6a07bfdebe17002b36
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Add prototype orderbook history rendering
+        description: 
+        timeString: 2026-04-04T20:35:05.000+01:00
+        commitTimeString: 2026-04-04T20:35:05.000+01:00
+        changes:
+        - path: Assets\FinanceData.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData.meta
+          projectPath: Assets\FinanceData.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\FinanceData\binance_orderbook_sampler.py
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\binance_orderbook_sampler.py
+          projectPath: Assets\FinanceData\binance_orderbook_sampler.py
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\FinanceData\binance_orderbook_sampler.py.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\binance_orderbook_sampler.py.meta
+          projectPath: Assets\FinanceData\binance_orderbook_sampler.py.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\FinanceData\ethusdt_10s.txt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_10s.txt
+          projectPath: Assets\FinanceData\ethusdt_10s.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\FinanceData\ethusdt_10s.txt.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_10s.txt.meta
+          projectPath: Assets\FinanceData\ethusdt_10s.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\FinanceData\ethusdt_1h.txt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_1h.txt
+          projectPath: Assets\FinanceData\ethusdt_1h.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\FinanceData\ethusdt_1h.txt.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\FinanceData\ethusdt_1h.txt.meta
+          projectPath: Assets\FinanceData\ethusdt_1h.txt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials.meta
+          projectPath: Assets\Materials.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Blue.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Blue.mat
+          projectPath: Assets\Materials\Blue.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Blue.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Blue.mat.meta
+          projectPath: Assets\Materials\Blue.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Red.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat
+          projectPath: Assets\Materials\Red.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Red.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Red.mat.meta
+          projectPath: Assets\Materials\Red.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts.meta
+          projectPath: Assets\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryVisualizer.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs
+          projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+          projectPath: Assets\Scripts\OrderBookHistoryVisualizer.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Mobile_RPAsset.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_RPAsset.asset
+          projectPath: Assets\Settings\Mobile_RPAsset.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Settings\SampleSceneProfile.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset
+          projectPath: Assets\Settings\SampleSceneProfile.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 85d4943f3bf5b39319e2f2c47557d54b2469e504
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Add 3D template files
+        description: 
+        timeString: 2026-03-20T01:06:41.000+00:00
+        commitTimeString: 2026-03-20T01:06:41.000+00:00
+        changes:
+        - path: .vscode\extensions.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\extensions.json
+          projectPath: .vscode\extensions.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .vscode\launch.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\launch.json
+          projectPath: .vscode\launch.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: .vscode\settings.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+          projectPath: .vscode\settings.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\InputSystem_Actions.inputactions
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\InputSystem_Actions.inputactions
+          projectPath: Assets\InputSystem_Actions.inputactions
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\InputSystem_Actions.inputactions.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\InputSystem_Actions.inputactions.meta
+          projectPath: Assets\InputSystem_Actions.inputactions.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Readme.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Readme.asset
+          projectPath: Assets\Readme.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Readme.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Readme.asset.meta
+          projectPath: Assets\Readme.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes.meta
+          projectPath: Assets\Scenes.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity.meta
+          projectPath: Assets\Scenes\SampleScene.unity.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings.meta
+          projectPath: Assets\Settings.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\DefaultVolumeProfile.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\DefaultVolumeProfile.asset
+          projectPath: Assets\Settings\DefaultVolumeProfile.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\DefaultVolumeProfile.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\DefaultVolumeProfile.asset.meta
+          projectPath: Assets\Settings\DefaultVolumeProfile.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Mobile_RPAsset.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_RPAsset.asset
+          projectPath: Assets\Settings\Mobile_RPAsset.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Mobile_RPAsset.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_RPAsset.asset.meta
+          projectPath: Assets\Settings\Mobile_RPAsset.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Mobile_Renderer.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_Renderer.asset
+          projectPath: Assets\Settings\Mobile_Renderer.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\Mobile_Renderer.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\Mobile_Renderer.asset.meta
+          projectPath: Assets\Settings\Mobile_Renderer.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\PC_RPAsset.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_RPAsset.asset
+          projectPath: Assets\Settings\PC_RPAsset.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\PC_RPAsset.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_RPAsset.asset.meta
+          projectPath: Assets\Settings\PC_RPAsset.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\PC_Renderer.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_Renderer.asset
+          projectPath: Assets\Settings\PC_Renderer.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\PC_Renderer.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\PC_Renderer.asset.meta
+          projectPath: Assets\Settings\PC_Renderer.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\SampleSceneProfile.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset
+          projectPath: Assets\Settings\SampleSceneProfile.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\SampleSceneProfile.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\SampleSceneProfile.asset.meta
+          projectPath: Assets\Settings\SampleSceneProfile.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+          projectPath: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Settings\UniversalRenderPipelineGlobalSettings.asset.meta
+          projectPath: Assets\Settings\UniversalRenderPipelineGlobalSettings.asset.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo.meta
+          projectPath: Assets\TutorialInfo.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Icons.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Icons.meta
+          projectPath: Assets\TutorialInfo\Icons.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Icons\URP.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Icons\URP.png
+          projectPath: Assets\TutorialInfo\Icons\URP.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Icons\URP.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Icons\URP.png.meta
+          projectPath: Assets\TutorialInfo\Icons\URP.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Layout.wlt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Layout.wlt
+          projectPath: Assets\TutorialInfo\Layout.wlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Layout.wlt.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Layout.wlt.meta
+          projectPath: Assets\TutorialInfo\Layout.wlt.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts.meta
+          projectPath: Assets\TutorialInfo\Scripts.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Editor.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Editor.meta
+          projectPath: Assets\TutorialInfo\Scripts\Editor.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+          projectPath: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs.meta
+          projectPath: Assets\TutorialInfo\Scripts\Editor\ReadmeEditor.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Readme.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Readme.cs
+          projectPath: Assets\TutorialInfo\Scripts\Readme.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TutorialInfo\Scripts\Readme.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TutorialInfo\Scripts\Readme.cs.meta
+          projectPath: Assets\TutorialInfo\Scripts\Readme.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\manifest.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Packages\manifest.json
+          projectPath: Packages\manifest.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Packages\packages-lock.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Packages\packages-lock.json
+          projectPath: Packages\packages-lock.json
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\AudioManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\AudioManager.asset
+          projectPath: ProjectSettings\AudioManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ClusterInputManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ClusterInputManager.asset
+          projectPath: ProjectSettings\ClusterInputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\DynamicsManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\DynamicsManager.asset
+          projectPath: ProjectSettings\DynamicsManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorBuildSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\EditorBuildSettings.asset
+          projectPath: ProjectSettings\EditorBuildSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\EditorSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\EditorSettings.asset
+          projectPath: ProjectSettings\EditorSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\GraphicsSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\GraphicsSettings.asset
+          projectPath: ProjectSettings\GraphicsSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\InputManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\InputManager.asset
+          projectPath: ProjectSettings\InputManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MemorySettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\MemorySettings.asset
+          projectPath: ProjectSettings\MemorySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\MultiplayerManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\MultiplayerManager.asset
+          projectPath: ProjectSettings\MultiplayerManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\NavMeshAreas.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\NavMeshAreas.asset
+          projectPath: ProjectSettings\NavMeshAreas.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PackageManagerSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\PackageManagerSettings.asset
+          projectPath: ProjectSettings\PackageManagerSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\Physics2DSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\Physics2DSettings.asset
+          projectPath: ProjectSettings\Physics2DSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\PresetManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\PresetManager.asset
+          projectPath: ProjectSettings\PresetManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ProjectVersion.txt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ProjectVersion.txt
+          projectPath: ProjectSettings\ProjectVersion.txt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\QualitySettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\QualitySettings.asset
+          projectPath: ProjectSettings\QualitySettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\ShaderGraphSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\ShaderGraphSettings.asset
+          projectPath: ProjectSettings\ShaderGraphSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TagManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\TagManager.asset
+          projectPath: ProjectSettings\TagManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\TimeManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\TimeManager.asset
+          projectPath: ProjectSettings\TimeManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\URPProjectSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\URPProjectSettings.asset
+          projectPath: ProjectSettings\URPProjectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\UnityConnectSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\UnityConnectSettings.asset
+          projectPath: ProjectSettings\UnityConnectSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VFXManager.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\VFXManager.asset
+          projectPath: ProjectSettings\VFXManager.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\VersionControlSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\VersionControlSettings.asset
+          projectPath: ProjectSettings\VersionControlSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: ProjectSettings\XRSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\ProjectSettings\XRSettings.asset
+          projectPath: ProjectSettings\XRSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\EditorUserSettings.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Layouts\default-6000.dwlt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+          projectPath: UserSettings\Layouts\default-6000.dwlt
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.index
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Search.index
+          projectPath: UserSettings\Search.index
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: UserSettings\Search.settings
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Search.settings
+          projectPath: UserSettings\Search.settings
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: gdp-project-j.slnx
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j.slnx
+          projectPath: gdp-project-j.slnx
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 712f1c0d920f4a7da0ba25c84e1a005ba539927a
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
         summary: Initial commit
         description: 
-        timeString: 2026-04-28T15:56:39.000+01:00
-        commitTimeString: 2026-04-28T15:56:39.000+01:00
+        timeString: 2026-03-20T01:04:48.000+00:00
+        commitTimeString: 2026-03-20T01:04:48.000+00:00
         changes:
         - path: .gitattributes
           fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.gitattributes
@@ -655,7 +2319,7 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 4
           workTreeStatus: 0
-      statusAhead: 0
+      statusAhead: 1
       selectedIndex: -1
     selectedEntry:
       commitID: 
@@ -764,13 +2428,13 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 00:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2026-04-28T15:57:19.487+01:00
+      updatedTimeString: 2026-05-02T16:02:28.611+01:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2026-04-28T15:57:51.589+01:00
+      updatedTimeString: 2026-05-02T16:02:29.053+01:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2026-04-28T15:57:51.295+01:00
+      updatedTimeString: 2026-05-02T16:03:00.500+01:00
       cacheType: 6
     lockedFiles: []
     gitStatusEntries: []
@@ -787,30 +2451,30 @@ MonoBehaviour:
       m_TextWithWhitespace: "Release Lock (forced)\u200B"
   hasRemote: 1
   currentRemoteName: origin
-  currentBranch: orderbook-visualisation
+  currentBranch: UI-development
   currentRemoteUrl: https://github.com/Retr0MrWave/gdp-project-j.git
   statusAhead: 0
   statusBehind: 0
-  hasItemsToCommit: 1
-  isTrackingRemoteBranch: 1
+  hasItemsToCommit: 0
+  isTrackingRemoteBranch: 0
   currentBranchContent:
-    m_Text: orderbook-visualisation
+    m_Text: UI-development
     m_Image: {fileID: 0}
     m_Tooltip: Active branch
-    m_TextWithWhitespace: "orderbook-visualisation\u200B"
+    m_TextWithWhitespace: "UI-development\u200B"
   currentRemoteUrlContent:
     m_Text: https://github.com/Retr0MrWave/gdp-project-j.git
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
     m_TextWithWhitespace: "https://github.com/Retr0MrWave/gdp-project-j.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2026-04-28T16:13:17.976+01:00
+    updatedTimeString: 2026-05-02T16:04:06.966+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2026-04-28T16:45:13.420+01:00
+    updatedTimeString: 2026-05-02T16:04:07.005+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2026-04-28T16:45:13.407+01:00
+    updatedTimeString: 2026-05-02T16:04:30.515+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -1152,7 +2816,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1162,7 +2826,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project
   m_LockTracker:
@@ -1171,9 +2835,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 47970
+    - m_Data: 46872
     m_LastClickedID:
-      m_Data: 47970
+      m_Data: 46872
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 46876
@@ -1236,10 +2900,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs:
-    - m_Data: 47906
-    m_LastClickedInstanceID: 47906
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: []
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1291,8 +2954,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1175.4
-    y: 24
+    x: 1174.4
+    y: 79.200005
     width: 360.59998
     height: 690.8
   m_SerializedDataModeController:
@@ -1366,9 +3029,8 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -8218
-      - m_Data: -1296
-      - m_Data: 48058
+      - m_Data: -2524
+      - m_Data: -1298
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1386,7 +3048,7 @@ MonoBehaviour:
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 4}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -1961,9 +3623,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -5.0242815, y: -2.6612754, z: -3.0439916}
+    m_Target: {x: -4.416965, y: -1.5881329, z: -3.9729772}
     speed: 2
-    m_Value: {x: -5.0242815, y: -2.6612754, z: -3.0439916}
+    m_Value: {x: -4.416965, y: -1.5881329, z: -3.9729772}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 2
@@ -2009,9 +3671,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.02658822, y: 0.7494194, z: -0.030149939, w: -0.6608785}
+    m_Target: {x: -0.1007832, y: 0.67749625, z: -0.09451513, w: -0.7224502}
     speed: 2
-    m_Value: {x: -0.026588218, y: 0.74941945, z: -0.030149939, w: -0.6608785}
+    m_Value: {x: -0.1007832, y: 0.67749625, z: -0.09451513, w: -0.72245014}
   m_Size:
     m_Target: 6.3814335
     speed: 2
@@ -2131,7 +3793,7 @@ MonoBehaviour:
       y: 21
       width: 882.80005
       height: 377.8
-    m_Scale: {x: 1.5, y: 1.5}
+    m_Scale: {x: 1.25, y: 1.25}
     m_Translation: {x: 441.40002, y: 188.9}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -2139,10 +3801,10 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -294.2667
-      y: -125.93333
-      width: 588.5334
-      height: 251.86665
+      x: -353.12003
+      y: -151.12
+      width: 706.24005
+      height: 302.24
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 1103.5, y: 498.5}
