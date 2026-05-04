@@ -43,6 +43,8 @@ public class OrderBookHistoryRenderer : MonoBehaviour
 
     private Mesh _bidMesh;
     private Mesh _askMesh;
+    private MeshCollider _bidMeshCollider;
+    private MeshCollider _askMeshCollider;
     private GameObject _bidsChild;
     private GameObject _asksChild;
     private Material _generatedBidMaterial;
@@ -165,6 +167,8 @@ public class OrderBookHistoryRenderer : MonoBehaviour
             bidFilter.sharedMesh = _bidMesh;
         }
 
+        _bidMeshCollider = _bidsChild.GetComponent<MeshCollider>();
+
         if (_askMesh == null)
         {
             _askMesh = new Mesh();
@@ -172,6 +176,8 @@ public class OrderBookHistoryRenderer : MonoBehaviour
             _askMesh.MarkDynamic();
             askFilter.sharedMesh = _askMesh;
         }
+
+        _askMeshCollider = _asksChild.GetComponent<MeshCollider>();
 
         ApplyMaterials();
     }
@@ -286,6 +292,11 @@ public class OrderBookHistoryRenderer : MonoBehaviour
         mesh.SetTriangles(triangles, 0);
         mesh.RecalculateNormals();
         mesh.RecalculateBounds();
+
+        if (isBidMesh)
+            _bidMeshCollider.sharedMesh = mesh;
+        else
+            _askMeshCollider.sharedMesh = mesh;
     }
 
     private static List<double> BuildUniquePriceAxis(IReadOnlyList<OrderBookSnapshot> snapshots)
