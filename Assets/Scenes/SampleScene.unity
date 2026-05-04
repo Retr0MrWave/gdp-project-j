@@ -209,7 +209,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 104778840}
-  m_Mesh: {fileID: 872065919}
+  m_Mesh: {fileID: 1019595740}
 --- !u!64 &104778844
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -511,7 +511,7 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!43 &582609598
+--- !u!43 &657188739
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -932,7 +932,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 856097157}
-  m_Mesh: {fileID: 582609598}
+  m_Mesh: {fileID: 657188739}
 --- !u!64 &856097161
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -955,7 +955,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 0
   m_Mesh: {fileID: 0}
---- !u!43 &872065919
+--- !u!43 &1019595740
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1777,14 +1777,12 @@ MonoBehaviour:
   source: {fileID: 1245970505}
   renderer: {fileID: 2066739312}
   startIndex: 0
-  windowSize: 300
+  windowSize: 30
   refreshSourceOnStart: 1
   loadWindowOnStart: 1
-  scrollAction: {fileID: 1793637199849530191, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  invertScrollDirection: 0
-  scrollStep: 10
-  scrollDeadzone: 0.01
   followTailIfLive: 0
+  secondsPerTick: 0.5
+  stepSize: 1
 --- !u!4 &1755093263
 Transform:
   m_ObjectHideFlags: 0
@@ -2084,6 +2082,7 @@ MonoBehaviour:
   centerOnMidPrice: 1
   invertPriceAxis: 0
   useActualTimeSpacing: 1
+  fixedCenter: 1
   zMode: 1
   useLogVolume: 1
   volumeExponent: 1
