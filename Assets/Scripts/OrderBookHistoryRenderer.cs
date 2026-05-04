@@ -23,6 +23,8 @@ public class OrderBookHistoryRenderer : MonoBehaviour
     public bool centerOnMidPrice = true;
     public bool invertPriceAxis = false;
     public bool useActualTimeSpacing = true;
+    public bool fixedCenter = true;
+    private double fixedCenterPoint = -1.0;
 
     [Header("Z Meaning")]
     public ZMode zMode = ZMode.Cumulative;
@@ -128,6 +130,9 @@ public class OrderBookHistoryRenderer : MonoBehaviour
         double minBoundary = priceBoundaries[0];
         double maxBoundary = priceBoundaries[priceBoundaries.Length - 1];
         double priceOrigin = centerOnMidPrice ? 0.5 * (minBoundary + maxBoundary) : 0.0;
+
+        if (fixedCenter && fixedCenterPoint == -1.0) fixedCenterPoint = priceOrigin;
+        if (fixedCenter) priceOrigin = fixedCenterPoint;
 
         BuildIntoMesh(
             _bidMesh,

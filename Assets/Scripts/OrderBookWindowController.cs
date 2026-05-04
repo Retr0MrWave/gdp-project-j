@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,36 +17,17 @@ public class OrderBookWindowController : MonoBehaviour
     public bool refreshSourceOnStart = true;
     public bool loadWindowOnStart = true;
 
-    [Header("Input System")]
-    [Tooltip("Bind this to an Input System action, e.g. a Value/Vector2 action bound to <Mouse>/scroll.")]
-    public InputActionReference scrollAction;
-
-    [Tooltip("If true, interpret positive wheel input as scrolling backward in history.")]
-    public bool invertScrollDirection = false;
-
-    [Min(1)]
-    [Tooltip("How many snapshots to move per wheel notch.")]
-    public int scrollStep = 10;
-
-    [Min(0.001f)]
-    [Tooltip("Ignore tiny scroll values below this threshold.")]
-    public float scrollDeadzone = 0.01f;
 
     [Header("Live Mode")]
     public bool followTailIfLive = false;
+    
+    [Header("Scrolling Properties")]
+    public float secondsPerTick = 0.5f;
+    public int stepSize = 1;
+    private float timeDelta = 0f; 
 
     private readonly List<OrderBookSnapshot> _buffer = new List<OrderBookSnapshot>();
-    private float _pendingScrollY = 0f;
 
-    private void OnEnable()
-    {
-        EnableScrollAction();
-    }
-
-    private void OnDisable()
-    {
-        DisableScrollAction();
-    }
 
     private void Start()
     {
@@ -77,16 +59,12 @@ public class OrderBookWindowController : MonoBehaviour
             }
         }
 
-        if (Mathf.Abs(_pendingScrollY) > scrollDeadzone)
+        timeDelta += Time.deltaTime;
+
+        if (timeDelta >= secondsPerTick)
         {
-            float scrollY = _pendingScrollY;
-            _pendingScrollY = 0f;
-
-            int direction = scrollY > 0f ? -1 : 1;
-            if (invertScrollDirection)
-                direction *= -1;
-
-            ScrollBy(direction * scrollStep);
+            timeDelta -= secondsPerTick;
+            ScrollBy(stepSize);
         }
     }
 
@@ -159,30 +137,5 @@ public class OrderBookWindowController : MonoBehaviour
             return;
 
         JumpToIndex(Mathf.Max(0, source.Count - windowSize));
-    }
-
-    private void EnableScrollAction()
-    {
-        if (scrollAction == null || scrollAction.action == null)
-            return;
-
-        scrollAction.action.performed -= OnScrollPerformed;
-        scrollAction.action.performed += OnScrollPerformed;
-        scrollAction.action.Enable();
-    }
-
-    private void DisableScrollAction()
-    {
-        if (scrollAction == null || scrollAction.action == null)
-            return;
-
-        scrollAction.action.performed -= OnScrollPerformed;
-        scrollAction.action.Disable();
-    }
-
-    private void OnScrollPerformed(InputAction.CallbackContext context)
-    {
-        Vector2 scroll = context.ReadValue<Vector2>();
-        _pendingScrollY += scroll.y;
     }
 }
