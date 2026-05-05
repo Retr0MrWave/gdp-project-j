@@ -16,8 +16,8 @@ public class LiveOrderBookSampler : MonoBehaviour
     public int levels = 20;
     public int snapshotLimit = 5000;
     public int wsSpeedMs = 100;
-    public string outputSubfolder = "FinanceData";
-    public string outputFileName = "orderbooks.jsonl";
+    public string outputSubfolder = "StreamingAssets";
+    public string outputFileName = "ethusdt_live.jsonl";
     public float flushIntervalSeconds = 2.5f;
     public string restBaseUrl = "https://api.binance.com";
     public string wsBaseUrl = "wss://stream.binance.com:9443/ws";
@@ -66,6 +66,16 @@ public class LiveOrderBookSampler : MonoBehaviour
         outputWriter?.Close();
         outputWriter = null;
         Debug.Log($"[Sampler] Stopped. Wrote {sampleCount} total samples to {outputPath}");
+    }
+
+    private void Awake()
+    {
+        if (FindObjectsOfType<LiveOrderBookSampler>().Length > 1)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
     }
 
     private IEnumerator RunSampler()
