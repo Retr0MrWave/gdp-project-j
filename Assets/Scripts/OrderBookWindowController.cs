@@ -11,7 +11,7 @@ public class OrderBookWindowController : MonoBehaviour
 
     [Header("Window")]
     [Min(1)] public int startIndex = 0;
-    [Min(1)] public int windowSize = 300;
+    [Min(1)] public int windowSize = 50;
 
     [Header("Startup")]
     public bool refreshSourceOnStart = true;
@@ -22,7 +22,7 @@ public class OrderBookWindowController : MonoBehaviour
     public bool followTailIfLive = false;
     
     [Header("Scrolling Properties")]
-    public float secondsPerTick = 0.5f;
+    public float secondsPerTick = 0.05f;
     public int stepSize = 1;
     private float timeDelta = 0f; 
 
@@ -48,7 +48,8 @@ public class OrderBookWindowController : MonoBehaviour
 
         if (source == null || renderer == null)
             return;
-
+        if (IsMeshReady() == false)
+            return;
         if (followTailIfLive && source.IsLive)
         {
             int tailStart = Mathf.Max(0, source.Count - windowSize);
@@ -66,6 +67,11 @@ public class OrderBookWindowController : MonoBehaviour
             timeDelta -= secondsPerTick;
             ScrollBy(stepSize);
         }
+    }
+
+    public bool IsMeshReady()
+    {
+        return (startIndex + windowSize < source.Count);
     }
 
     [ContextMenu("Refresh Window")]

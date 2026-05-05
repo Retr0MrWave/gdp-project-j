@@ -24,6 +24,12 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     [Tooltip("Log the resolved path when indexing.")]
     public bool logResolvedPath = false;
 
+    [Header("Refresh Properties")]
+    
+    public float sourceRefreshTime = 2.5f;
+    
+    private float timeDelta = 0.0f;
+
     private readonly List<long> _lineOffsets = new List<long>();
     private string _resolvedPath = string.Empty;
 
@@ -46,6 +52,16 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     {
         if (buildIndexOnEnable)
             RefreshSource();
+    }
+
+    private void Update()
+    {
+        timeDelta += Time.deltaTime;
+        if (timeDelta >= sourceRefreshTime)
+        {
+            timeDelta -= sourceRefreshTime;
+            RefreshSource();
+        }
     }
 
     [ContextMenu("Refresh Source")]

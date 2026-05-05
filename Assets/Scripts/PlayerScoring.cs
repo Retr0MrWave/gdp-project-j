@@ -6,6 +6,8 @@ public class PlayerScoring : MonoBehaviour
     private BoxCollider _collider;
     public MeshCollider bidsCollider;
     public MeshCollider asksCollider;
+    public OrderBookWindowController controller;
+
 
     private float _score;
     public int Score => Mathf.FloorToInt(_score);
@@ -31,6 +33,8 @@ public class PlayerScoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (controller.IsMeshReady() == false)
+            return;
         _score += Time.deltaTime * (baseScore + deviationScore * Mathf.Abs(transform.position.z - centerCoordinate));
         
         Debug.Log("Score: " + Score + "; Health: " + Health);
@@ -38,6 +42,8 @@ public class PlayerScoring : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (controller.IsMeshReady() == false)
+            return;
         if (other == bidsCollider || other == asksCollider)
             _health -= Time.deltaTime * healthLoss;
     }

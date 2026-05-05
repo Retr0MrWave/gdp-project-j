@@ -11,14 +11,14 @@ using UnityEngine.Networking;
 
 public class LiveOrderBookSampler : MonoBehaviour
 {
-    public string symbol = "BTCUSDT";
-    public int sampleMs = 1000;
+    public string symbol = "ETHUSDT";
+    public int sampleMs = 100;
     public int levels = 20;
     public int snapshotLimit = 5000;
     public int wsSpeedMs = 100;
     public string outputSubfolder = "FinanceData";
     public string outputFileName = "orderbooks.jsonl";
-    public float flushIntervalSeconds = 5f;
+    public float flushIntervalSeconds = 2.5f;
     public string restBaseUrl = "https://api.binance.com";
     public string wsBaseUrl = "wss://stream.binance.com:9443/ws";
 
@@ -172,37 +172,37 @@ public class LiveOrderBookSampler : MonoBehaviour
         jsonBuilder.Clear();
         jsonBuilder.Append("{\"symbol\":\"");
         jsonBuilder.Append(cachedSymbolUpper);
-        jsonBuilder.Append("\",\"capturedAtMs\":");
+        jsonBuilder.Append("\",\"captured_at_ms\":");
         jsonBuilder.Append(capturedAtMs);
-        jsonBuilder.Append(",\"lastUpdateId\":");
+        jsonBuilder.Append(",\"last_update_id\":");
         jsonBuilder.Append(lastUpdateId);
 
         if (bidCount > 0)
         {
             string bestBidPrice = bidSortBuffer[0].Value;
-            jsonBuilder.Append(",\"bestBid\":{\"price\":\"");
+            jsonBuilder.Append(",\"best_bid\":[\"");
             jsonBuilder.Append(bestBidPrice);
-            jsonBuilder.Append("\",\"quantity\":\"");
+            jsonBuilder.Append("\",\"");
             jsonBuilder.Append(bookBids[bestBidPrice]);
-            jsonBuilder.Append("\"}");
+            jsonBuilder.Append("\"]");
         }
         else
         {
-            jsonBuilder.Append(",\"bestBid\":null");
+            jsonBuilder.Append(",\"best_bid\":null");
         }
 
         if (askCount > 0)
         {
             string bestAskPrice = askSortBuffer[0].Value;
-            jsonBuilder.Append(",\"bestAsk\":{\"price\":\"");
+            jsonBuilder.Append(",\"best_ask\":[\"");
             jsonBuilder.Append(bestAskPrice);
-            jsonBuilder.Append("\",\"quantity\":\"");
+            jsonBuilder.Append("\",\"");
             jsonBuilder.Append(bookAsks[bestAskPrice]);
-            jsonBuilder.Append("\"}");
+            jsonBuilder.Append("\"]");
         }
         else
         {
-            jsonBuilder.Append(",\"bestAsk\":null");
+            jsonBuilder.Append(",\"best_ask\":null");
         }
 
         jsonBuilder.Append(",\"bids\":[");
@@ -210,11 +210,11 @@ public class LiveOrderBookSampler : MonoBehaviour
         {
             if (i > 0) jsonBuilder.Append(",");
             string priceKey = bidSortBuffer[i].Value;
-            jsonBuilder.Append("{\"price\":\"");
+            jsonBuilder.Append("[\"");
             jsonBuilder.Append(priceKey);
-            jsonBuilder.Append("\",\"quantity\":\"");
+            jsonBuilder.Append("\",\"");
             jsonBuilder.Append(bookBids[priceKey]);
-            jsonBuilder.Append("\"}");
+            jsonBuilder.Append("\"]");
         }
         jsonBuilder.Append("]");
 
@@ -223,11 +223,11 @@ public class LiveOrderBookSampler : MonoBehaviour
         {
             if (i > 0) jsonBuilder.Append(",");
             string priceKey = askSortBuffer[i].Value;
-            jsonBuilder.Append("{\"price\":\"");
+            jsonBuilder.Append("[\"");
             jsonBuilder.Append(priceKey);
-            jsonBuilder.Append("\",\"quantity\":\"");
+            jsonBuilder.Append("\",\"");
             jsonBuilder.Append(bookAsks[priceKey]);
-            jsonBuilder.Append("\"}");
+            jsonBuilder.Append("\"]");
         }
         jsonBuilder.Append("]}");
 
