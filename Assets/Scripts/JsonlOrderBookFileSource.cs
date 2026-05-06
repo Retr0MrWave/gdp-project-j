@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 {
-    private const string UseLiveDataPrefsKey = "OrderBookUseLiveData";
+    public const string UseLiveDataPrefsKey = "OrderBookUseLiveData";
 
     public enum PathMode
     {
