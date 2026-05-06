@@ -214,8 +214,30 @@ public class OrderBookHistoryRenderer : MonoBehaviour
         if (timeCount < 2 || levelCount < 1)
             return;
 
-        int rowLength = levelCount * 2;
+        int rowLength = levelCount;
         int[,] indexMap = new int[timeCount, rowLength];
+
+        double[,] smoothed = new double[timeCount, levelCount];
+        
+        for (int t = 0; t < timeCount; t++)
+        {
+            for (int i = 0; i < levelCount; i++)
+            {
+
+                smoothed[t, i] = (
+                    rawGrid[t, i] +
+                    rawGrid[Mathf.Max(t - 1, 0), Mathf.Max(i - 1, 0)] +
+                    rawGrid[Mathf.Min(t + 1, timeCount - 1), Mathf.Min(i + 1, levelCount - 1)] +
+                    rawGrid[t, Mathf.Max(i - 1, 0)] +
+                    rawGrid[t, Mathf.Min(i + 1, levelCount - 1)] +
+                    rawGrid[Mathf.Max(t - 1, 0), i] +
+                    rawGrid[Mathf.Min(t + 1, timeCount - 1), i] +
+                    rawGrid[Mathf.Max(t - 1, 0), Mathf.Min(i + 1, levelCount - 1)] +
+                    rawGrid[Mathf.Min(t + 1, timeCount - 1), Mathf.Max(i - 1, 0)]
+                ) / 9.0;
+
+            }
+        }
 
         List<Vector3> vertices = new List<Vector3>(timeCount * rowLength);
         List<Vector2> uvs = new List<Vector2>(timeCount * rowLength);
@@ -227,7 +249,7 @@ public class OrderBookHistoryRenderer : MonoBehaviour
 
             for (int i = 0; i < levelCount; i++)
             {
-                float shaped = ShapeVolume(rawGrid[t, i]);
+                float shaped = ShapeVolume(smoothed[t, i]);
                 float z = shaped * amountZScale;
 
                 float y0 = (float)((priceBoundaries[i] - priceOrigin) * priceYScale * (invertPriceAxis ? -1.0 : 1.0));
@@ -237,12 +259,13 @@ public class OrderBookHistoryRenderer : MonoBehaviour
                 vertices.Add(new Vector3(x, y0, z));
                 uvs.Add(new Vector2(timeCount == 1 ? 0f : t / (float)(timeCount - 1), i / (float)levelCount));
 
-                int b = vertices.Count;
+                /*int b = vertices.Count;
                 vertices.Add(new Vector3(x, y1, z));
                 uvs.Add(new Vector2(timeCount == 1 ? 0f : t / (float)(timeCount - 1), (i + 1) / (float)levelCount));
+                */
 
-                indexMap[t, i * 2] = a;
-                indexMap[t, i * 2 + 1] = b;
+                indexMap[t, i /* 2*/] = a;
+                /*indexMap[t, i * 2 + 1] = b;*/
             }
         }
 

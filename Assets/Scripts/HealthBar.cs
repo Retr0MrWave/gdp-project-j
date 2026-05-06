@@ -13,7 +13,7 @@ public class HealthBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myrect.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, scorer.Health*180);
-        myrect.position = new Vector2(scorer.Health * 90 - 90, 0);
+        myrect.sizeDelta = new Vector2(180 * scorer.Health, 18);
+        //myrect.position = new Vector3(scorer.Health * 90 - 90, 0,0);
     }
 }
