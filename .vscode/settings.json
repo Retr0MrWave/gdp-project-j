@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "gdp-project-j-master.slnx"
+    "dotnet.defaultSolution": "gdp-project-j.slnx"
 }
