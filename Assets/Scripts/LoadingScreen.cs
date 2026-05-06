@@ -9,7 +9,7 @@ public class LoadingScreen : MonoBehaviour
     private void Update()
     {
         if (controller == null)
-            controller = FindObjectOfType<OrderBookWindowController>();
+            controller = FindAnyObjectByType<OrderBookWindowController>();
 
         if (controller != null && controller.IsMeshReady())
         {

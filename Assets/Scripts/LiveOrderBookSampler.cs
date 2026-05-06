@@ -70,7 +70,7 @@ public class LiveOrderBookSampler : MonoBehaviour
 
     private void Awake()
     {
-        if (FindObjectsOfType<LiveOrderBookSampler>().Length > 1)
+        if (FindObjectsByType<LiveOrderBookSampler>(FindObjectsSortMode.None).Length > 1)
         {
             Destroy(gameObject);
             return;
