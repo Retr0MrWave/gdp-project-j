@@ -16,7 +16,14 @@ public class MainMenuController : MonoBehaviour
             return liveModeToggle;
 
         if (cachedLiveModeToggle == null)
-            cachedLiveModeToggle = FindAnyObjectByType<Toggle>();
+        {
+            cachedLiveModeToggle = GetComponentInChildren<Toggle>(true);
+
+            if (cachedLiveModeToggle == null)
+            {
+                Debug.LogError("MainMenuController requires a reference to the live mode Toggle. Assign 'liveModeToggle' in the inspector or place the Toggle under this controller in the hierarchy.", this);
+            }
+        }
 
         return cachedLiveModeToggle;
     }
