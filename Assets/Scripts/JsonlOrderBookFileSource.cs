@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 {
+    public const string UseLiveDataPrefsKey = "OrderBookUseLiveData";
+
     public enum PathMode
     {
         AbsolutePath,
@@ -18,6 +20,9 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     [Tooltip("Absolute path, or a path relative to StreamingAssets depending on Path Mode.")]
     public string historyPath = "orderbooks.jsonl";
 
+    [Tooltip("JSONL file to use when live mode is enabled.")]
+    public string liveHistoryPath = "ethusdt_live.jsonl";
+
     [Tooltip("Build the line-offset index on enable.")]
     public bool buildIndexOnEnable = true;
 
@@ -25,10 +30,16 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     public bool logResolvedPath = false;
 
     [Header("Refresh Properties")]
-    
     public float sourceRefreshTime = 2.5f;
-    
+
+    [Tooltip("Refresh cadence while live mode is enabled.")]
+    public float liveSourceRefreshTime = 2.5f;
+
     private float timeDelta = 0.0f;
+    private bool useLiveData;
+    private bool configuredDefaultsCaptured;
+    private string demoHistoryPath;
+    private float demoSourceRefreshTime;
 
     private readonly List<long> _lineOffsets = new List<long>();
     private string _resolvedPath = string.Empty;
@@ -40,7 +51,7 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 
     public override bool IsLive
     {
-        get { return false; }
+        get { return useLiveData; }
     }
 
     public string ResolvedPath
@@ -50,12 +61,17 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 
     private void OnEnable()
     {
+        CaptureDemoDefaultsIfNeeded();
+        ApplyModeFromPrefs();
+
         if (buildIndexOnEnable)
             RefreshSource();
     }
 
     private void Update()
     {
+        ApplyModeFromPrefs();
+
         timeDelta += Time.deltaTime;
         if (timeDelta >= sourceRefreshTime)
         {
@@ -67,6 +83,9 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     [ContextMenu("Refresh Source")]
     public override void RefreshSource()
     {
+        CaptureDemoDefaultsIfNeeded();
+        ApplyModeFromPrefs();
+
         _resolvedPath = ResolvePath();
         _lineOffsets.Clear();
 
@@ -184,6 +203,23 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
             return historyPath;
 
         return Path.Combine(Application.streamingAssetsPath, historyPath);
+    }
+
+    private void CaptureDemoDefaultsIfNeeded()
+    {
+        if (configuredDefaultsCaptured)
+            return;
+
+        demoHistoryPath = historyPath;
+        demoSourceRefreshTime = sourceRefreshTime;
+        configuredDefaultsCaptured = true;
+    }
+
+    private void ApplyModeFromPrefs()
+    {
+        useLiveData = PlayerPrefs.GetInt(UseLiveDataPrefsKey, 0) == 1;
+        historyPath = useLiveData ? liveHistoryPath : demoHistoryPath;
+        sourceRefreshTime = useLiveData ? liveSourceRefreshTime : demoSourceRefreshTime;
     }
 
     private FileStream OpenReadStream()
