@@ -1,13 +1,40 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private string gameSceneName = "SampleScene";
     [SerializeField] private GameObject howToPlayPanel;
+    private const string UseLiveDataPrefsKey = "OrderBookUseLiveData";
+    [SerializeField] private Toggle liveModeToggle;
+    private Toggle cachedLiveModeToggle;
+
+    private Toggle GetLiveModeToggle()
+    {
+        if (liveModeToggle != null)
+            return liveModeToggle;
+
+        if (cachedLiveModeToggle == null)
+        {
+            cachedLiveModeToggle = GetComponentInChildren<Toggle>(true);
+
+            if (cachedLiveModeToggle == null)
+            {
+                Debug.LogError("MainMenuController requires a reference to the live mode Toggle. Assign 'liveModeToggle' in the inspector or place the Toggle under this controller in the hierarchy.", this);
+            }
+        }
+
+        return cachedLiveModeToggle;
+    }
 
     public void PlayGame()
     {
+        Toggle toggle = GetLiveModeToggle();
+        bool useLiveData = toggle != null && toggle.isOn;
+
+        PlayerPrefs.SetInt(UseLiveDataPrefsKey, useLiveData ? 1 : 0);
+        PlayerPrefs.Save();
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneName);
     }
