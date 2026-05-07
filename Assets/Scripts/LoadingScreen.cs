@@ -1,20 +1,32 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
 {
-    public GameObject loadingUI;
-
-    private OrderBookWindowController controller;
+    public OrderBookWindowController controller;
+    public Image progressBar;
 
     private void Update()
     {
         if (controller == null)
-            controller = FindAnyObjectByType<OrderBookWindowController>();
+            controller = FindObjectOfType<OrderBookWindowController>();
 
-        if (controller != null && controller.IsMeshReady())
+        if (controller == null)
+            return;
+
+        if (controller.IsMeshReady())
         {
-            loadingUI.SetActive(false);
-            enabled = false;
+            gameObject.SetActive(false);
+            return;
         }
+
+        var sampler = LiveOrderBookSampler.instance;
+        if (sampler == null)
+            return;
+
+        int required = controller.startIndex + controller.windowSize;
+        float progress = Mathf.Clamp01((float)sampler.SnapshotCount / required);
+
+        progressBar.fillAmount = progress;
     }
 }
