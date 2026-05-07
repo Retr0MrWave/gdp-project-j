@@ -6,12 +6,13 @@ using UnityEngine.InputSystem;
 public class OrderBookWindowController : MonoBehaviour
 {
     [Header("References")]
-    public OrderBookSourceBehaviour source;
+    public OrderBookSourceBehaviour dataSource;
+    public OrderBookSourceBehaviour liveSource;
     public OrderBookHistoryRenderer renderer;
 
     [Header("Window")]
     [Min(1)] public int startIndex = 0;
-    [Min(1)] public int windowSize = 50;
+    [Min(1)] public int windowSize = 100;
 
     [Header("Startup")]
     public bool refreshSourceOnStart = true;
@@ -28,9 +29,12 @@ public class OrderBookWindowController : MonoBehaviour
 
     private readonly List<OrderBookSnapshot> _buffer = new List<OrderBookSnapshot>();
 
-
+    private OrderBookSourceBehaviour source;
     private void Start()
     {
+
+        if (true) source = liveSource;
+        else source = dataSource;
         if (source == null || renderer == null)
             return;
 
@@ -49,7 +53,11 @@ public class OrderBookWindowController : MonoBehaviour
         if (source == null || renderer == null)
             return;
         if (IsMeshReady() == false)
+        {
+           //Debug.Log(source.Count);
+            RefreshWindow();
             return;
+        }
         if (followTailIfLive && source.IsLive)
         {
             int tailStart = Mathf.Max(0, source.Count - windowSize);

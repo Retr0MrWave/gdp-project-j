@@ -1411,6 +1411,50 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108088330}
   m_CullTransparentMesh: 1
+--- !u!1 &1216450756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1216450758}
+  - component: {fileID: 1216450757}
+  m_Layer: 0
+  m_Name: LiveOrderBookSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1216450757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216450756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea68fc35118f41942938b96c664df293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LiveOrderBookSource
+--- !u!4 &1216450758
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1216450756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 30.70521, y: -2.89415, z: 7.53931}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1219552945
 GameObject:
   m_ObjectHideFlags: 0
@@ -2169,7 +2213,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65f22ba5f502de42a5e006c6d431754, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrderBookWindowController
-  source: {fileID: 1245970505}
+  dataSource: {fileID: 1245970505}
+  liveSource: {fileID: 1216450757}
   renderer: {fileID: 2066739312}
   startIndex: 0
   windowSize: 100
@@ -2278,7 +2323,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Dynamic Bids Mesh
+  m_Name: Dynamic Asks Mesh
   serializedVersion: 12
   m_SubMeshes:
   - serializedVersion: 2
@@ -2829,3 +2874,4 @@ SceneRoots:
   - {fileID: 1531205099}
   - {fileID: 1219552949}
   - {fileID: 62758053}
+  - {fileID: 1216450758}
