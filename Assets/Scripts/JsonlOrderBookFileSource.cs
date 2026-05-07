@@ -72,21 +72,21 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 
         if (string.IsNullOrWhiteSpace(_resolvedPath))
         {
-            Debug.LogWarning("JsonlOrderBookFileSource: no file path configured.");
+           //Debug.LogWarning("JsonlOrderBookFileSource: no file path configured.");
             return;
         }
 
         if (logResolvedPath)
-            Debug.Log("JsonlOrderBookFileSource resolved path: " + _resolvedPath);
+           //Debug.Log("JsonlOrderBookFileSource resolved path: " + _resolvedPath);
 
         if (!File.Exists(_resolvedPath))
         {
-            Debug.LogWarning("JsonlOrderBookFileSource: file not found: " + _resolvedPath);
+           //Debug.LogWarning("JsonlOrderBookFileSource: file not found: " + _resolvedPath);
             return;
         }
 
         BuildLineOffsetIndex(_resolvedPath);
-        Debug.Log("JsonlOrderBookFileSource indexed " + _lineOffsets.Count + " snapshots.");
+       //Debug.Log("JsonlOrderBookFileSource indexed " + _lineOffsets.Count + " snapshots.");
     }
 
     public override bool TryGetRange(int startInclusive, int count, List<OrderBookSnapshot> results)
@@ -125,7 +125,7 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
         }
         catch (Exception ex)
         {
-            Debug.LogError("JsonlOrderBookFileSource.TryGetRange failed: " + ex.Message);
+           //Debug.LogError("JsonlOrderBookFileSource.TryGetRange failed: " + ex.Message);
             results.Clear();
             return false;
         }

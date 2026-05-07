@@ -12,13 +12,10 @@ using UnityEngine.Networking;
 public class LiveOrderBookSampler : MonoBehaviour
 {
     public string symbol = "ETHUSDT";
-    public int sampleMs = 100;
+    public int sampleMs = 50;
     public int levels = 20;
     public int snapshotLimit = 5000;
     public int wsSpeedMs = 100;
-    public string outputSubfolder = "StreamingAssets";
-    public string outputFileName = "ethusdt_live.jsonl";
-    public float flushIntervalSeconds = 2.5f;
     public string restBaseUrl = "https://api.binance.com";
     public string wsBaseUrl = "wss://stream.binance.com:9443/ws";
 
@@ -34,22 +31,57 @@ public class LiveOrderBookSampler : MonoBehaviour
 
     private bool synced;
     private float nextSampleTime;
-    private float lastFlushTime;
     private int sampleCount;
-    private string outputPath;
 
-    private List<string> unflushedLines = new List<string>();
-    private StreamWriter outputWriter;
-    private StringBuilder jsonBuilder = new StringBuilder(4096);
+    private readonly List<OrderBookSnapshot> snapshots = new List<OrderBookSnapshot>();
 
     private List<KeyValuePair<float, string>> bidSortBuffer = new List<KeyValuePair<float, string>>();
     private List<KeyValuePair<float, string>> askSortBuffer = new List<KeyValuePair<float, string>>();
 
     private string cachedSymbolUpper;
 
-    private string ResolveOutputDirectory()
+    public static LiveOrderBookSampler instance;
+    public int SnapshotCount => snapshots.Count;
+    public bool IsSynced => synced;
+
+    public bool TryGetRange(int startInclusive, int count, List<OrderBookSnapshot> results)
     {
-        return Path.Combine(Application.dataPath, outputSubfolder);
+        results.Clear();
+        if (snapshots.Count == 0 || count <= 0)
+            return false;
+
+        int start = Mathf.Clamp(startInclusive, 0, snapshots.Count - 1);
+        int end = Mathf.Min(start + count, snapshots.Count);
+
+        for (int i = start; i < end; i++)
+            results.Add(snapshots[i]);
+
+        return results.Count > 0;
+    }
+
+    public int FindNearestIndexByTime(long capturedAtMs)
+    {
+        if (snapshots.Count == 0)
+            return -1;
+
+        int lo = 0;
+        int hi = snapshots.Count - 1;
+
+        while (lo <= hi)
+        {
+            int mid = lo + ((hi - lo) / 2);
+            if (snapshots[mid].capturedAtMs < capturedAtMs)
+                lo = mid + 1;
+            else
+                hi = mid - 1;
+        }
+
+        if (lo <= 0) return 0;
+        if (lo >= snapshots.Count) return snapshots.Count - 1;
+
+        long beforeDelta = Math.Abs(snapshots[lo - 1].capturedAtMs - capturedAtMs);
+        long afterDelta = Math.Abs(snapshots[lo].capturedAtMs - capturedAtMs);
+        return beforeDelta <= afterDelta ? lo - 1 : lo;
     }
 
     private void Start()
@@ -62,35 +94,22 @@ public class LiveOrderBookSampler : MonoBehaviour
     {
         cts?.Cancel();
         cts?.Dispose();
-        FlushToDisk();
-        outputWriter?.Close();
-        outputWriter = null;
-        Debug.Log($"[Sampler] Stopped. Wrote {sampleCount} total samples to {outputPath}");
+       //Debug.Log($"[Sampler] Stopped. {snapshots.Count} total snapshots in memory.");
     }
 
     private void Awake()
     {
-        if (FindObjectsOfType<LiveOrderBookSampler>().Length > 1)
+        if (instance != null)
         {
             Destroy(gameObject);
             return;
         }
+        instance = this;
         DontDestroyOnLoad(gameObject);
     }
 
     private IEnumerator RunSampler()
     {
-        string outputDir = ResolveOutputDirectory();
-        outputPath = Path.Combine(outputDir, outputFileName);
-
-        Debug.Log($"[Sampler] Output path: {outputPath}");
-
-        if (!Directory.Exists(outputDir))
-            Directory.CreateDirectory(outputDir);
-
-        outputWriter = new StreamWriter(outputPath, false, Encoding.UTF8);
-        outputWriter.AutoFlush = false;
-
         cts = new CancellationTokenSource();
         Thread wsThread = new Thread(() => RunWebSocket(cts.Token));
         wsThread.IsBackground = true;
@@ -101,15 +120,14 @@ public class LiveOrderBookSampler : MonoBehaviour
 
         if (!synced)
         {
-            Debug.LogError("[Sampler] Failed to sync order book.");
+           //Debug.LogError("[Sampler] Failed to sync order book.");
             yield break;
         }
 
         nextSampleTime = Time.realtimeSinceStartup;
-        lastFlushTime = Time.realtimeSinceStartup;
         float sampleIntervalSec = sampleMs / 1000f;
 
-        Debug.Log($"[Sampler] Collecting {cachedSymbolUpper} indefinitely, sampling every {sampleMs}ms, flushing every {flushIntervalSeconds}s");
+       //Debug.Log($"[Sampler] Collecting {cachedSymbolUpper} indefinitely, sampling every {sampleMs}ms");
 
         while (true)
         {
@@ -126,31 +144,7 @@ public class LiveOrderBookSampler : MonoBehaviour
                     nextSampleTime = now + sampleIntervalSec;
             }
 
-            if (now - lastFlushTime >= flushIntervalSeconds)
-            {
-                FlushToDisk();
-                lastFlushTime = now;
-            }
-
             yield return null;
-        }
-    }
-
-    private void FlushToDisk()
-    {
-        if (unflushedLines.Count == 0 || outputWriter == null) return;
-
-        try
-        {
-            for (int i = 0; i < unflushedLines.Count; i++)
-                outputWriter.WriteLine(unflushedLines[i]);
-
-            outputWriter.Flush();
-            unflushedLines.Clear();
-        }
-        catch (Exception ex)
-        {
-            Debug.LogError($"[Sampler] Flush failed: {ex.Message}");
         }
     }
 
@@ -177,71 +171,29 @@ public class LiveOrderBookSampler : MonoBehaviour
         int bidCount = levels > 0 ? Math.Min(levels, bidSortBuffer.Count) : bidSortBuffer.Count;
         int askCount = levels > 0 ? Math.Min(levels, askSortBuffer.Count) : askSortBuffer.Count;
 
-        long capturedAtMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
+        var snapshot = new OrderBookSnapshot();
+        snapshot.symbol = cachedSymbolUpper;
+        snapshot.capturedAtMs = DateTimeOffset.UtcNow.ToUnixTimeMilliseconds();
 
-        jsonBuilder.Clear();
-        jsonBuilder.Append("{\"symbol\":\"");
-        jsonBuilder.Append(cachedSymbolUpper);
-        jsonBuilder.Append("\",\"captured_at_ms\":");
-        jsonBuilder.Append(capturedAtMs);
-        jsonBuilder.Append(",\"last_update_id\":");
-        jsonBuilder.Append(lastUpdateId);
-
-        if (bidCount > 0)
-        {
-            string bestBidPrice = bidSortBuffer[0].Value;
-            jsonBuilder.Append(",\"best_bid\":[\"");
-            jsonBuilder.Append(bestBidPrice);
-            jsonBuilder.Append("\",\"");
-            jsonBuilder.Append(bookBids[bestBidPrice]);
-            jsonBuilder.Append("\"]");
-        }
-        else
-        {
-            jsonBuilder.Append(",\"best_bid\":null");
-        }
-
-        if (askCount > 0)
-        {
-            string bestAskPrice = askSortBuffer[0].Value;
-            jsonBuilder.Append(",\"best_ask\":[\"");
-            jsonBuilder.Append(bestAskPrice);
-            jsonBuilder.Append("\",\"");
-            jsonBuilder.Append(bookAsks[bestAskPrice]);
-            jsonBuilder.Append("\"]");
-        }
-        else
-        {
-            jsonBuilder.Append(",\"best_ask\":null");
-        }
-
-        jsonBuilder.Append(",\"bids\":[");
         for (int i = 0; i < bidCount; i++)
         {
-            if (i > 0) jsonBuilder.Append(",");
             string priceKey = bidSortBuffer[i].Value;
-            jsonBuilder.Append("[\"");
-            jsonBuilder.Append(priceKey);
-            jsonBuilder.Append("\",\"");
-            jsonBuilder.Append(bookBids[priceKey]);
-            jsonBuilder.Append("\"]");
+            double p, q;
+            double.TryParse(priceKey, NumberStyles.Float, CultureInfo.InvariantCulture, out p);
+            double.TryParse(bookBids[priceKey], NumberStyles.Float, CultureInfo.InvariantCulture, out q);
+            snapshot.bids.Add(new OrderBookLevel(p, q));
         }
-        jsonBuilder.Append("]");
 
-        jsonBuilder.Append(",\"asks\":[");
         for (int i = 0; i < askCount; i++)
         {
-            if (i > 0) jsonBuilder.Append(",");
             string priceKey = askSortBuffer[i].Value;
-            jsonBuilder.Append("[\"");
-            jsonBuilder.Append(priceKey);
-            jsonBuilder.Append("\",\"");
-            jsonBuilder.Append(bookAsks[priceKey]);
-            jsonBuilder.Append("\"]");
+            double p, q;
+            double.TryParse(priceKey, NumberStyles.Float, CultureInfo.InvariantCulture, out p);
+            double.TryParse(bookAsks[priceKey], NumberStyles.Float, CultureInfo.InvariantCulture, out q);
+            snapshot.asks.Add(new OrderBookLevel(p, q));
         }
-        jsonBuilder.Append("]}");
 
-        unflushedLines.Add(jsonBuilder.ToString());
+        snapshots.Add(snapshot);
     }
 
     private IEnumerator SyncOrderBook()
@@ -269,7 +221,7 @@ public class LiveOrderBookSampler : MonoBehaviour
 
         if (firstU < 0)
         {
-            Debug.LogError("[Sampler] No depth events received from WebSocket");
+           //Debug.LogError("[Sampler] No depth events received from WebSocket");
             yield break;
         }
 
@@ -282,7 +234,7 @@ public class LiveOrderBookSampler : MonoBehaviour
 
             if (snapshot == null)
             {
-                Debug.LogError("[Sampler] Failed to fetch REST snapshot");
+               //Debug.LogError("[Sampler] Failed to fetch REST snapshot");
                 yield break;
             }
 
@@ -308,7 +260,7 @@ public class LiveOrderBookSampler : MonoBehaviour
             var firstEvent = ParseEvent(aligned[0]);
             if (!(firstEvent.firstUpdateId <= lastUpdateId + 1 && lastUpdateId + 1 <= firstEvent.finalUpdateId))
             {
-                Debug.LogError("[Sampler] Could not align buffered events with REST snapshot");
+               //Debug.LogError("[Sampler] Could not align buffered events with REST snapshot");
                 yield break;
             }
 
@@ -320,7 +272,7 @@ public class LiveOrderBookSampler : MonoBehaviour
         }
 
         synced = true;
-        Debug.Log($"[Sampler] Order book synced. lastUpdateId={lastUpdateId}, bids={bookBids.Count}, asks={bookAsks.Count}");
+       //Debug.Log($"[Sampler] Order book synced. lastUpdateId={lastUpdateId}, bids={bookBids.Count}, asks={bookAsks.Count}");
     }
 
     private void LoadSnapshot(Dictionary<string, object> snapshot)
@@ -356,7 +308,7 @@ public class LiveOrderBookSampler : MonoBehaviour
 
         if (ev.firstUpdateId > lastUpdateId + 1)
         {
-            Debug.LogWarning($"[Sampler] Gap detected: U={ev.firstUpdateId}, local={lastUpdateId}");
+           //Debug.LogWarning($"[Sampler] Gap detected: U={ev.firstUpdateId}, local={lastUpdateId}");
             return;
         }
 
@@ -403,7 +355,7 @@ public class LiveOrderBookSampler : MonoBehaviour
 
             if (req.result != UnityWebRequest.Result.Success)
             {
-                Debug.LogError($"[Sampler] REST snapshot failed: {req.error}");
+               //Debug.LogError($"[Sampler] REST snapshot failed: {req.error}");
                 callback(null);
                 yield break;
             }
@@ -420,8 +372,10 @@ public class LiveOrderBookSampler : MonoBehaviour
 
         try
         {
+           //Debug.Log($"[Sampler] Connecting WebSocket to {wsUrl}");
             ws = new ClientWebSocket();
             await ws.ConnectAsync(new Uri(wsUrl), ct);
+           //Debug.Log("[Sampler] WebSocket connected successfully");
 
             byte[] buffer = new byte[16384];
 
@@ -441,11 +395,13 @@ public class LiveOrderBookSampler : MonoBehaviour
                 lock (queueLock)
                     rawEventQueue.Enqueue(sb.ToString());
             }
+
+           //Debug.LogWarning($"[Sampler] WebSocket loop exited. State: {ws.State}");
         }
         catch (OperationCanceledException) { }
         catch (Exception ex)
         {
-            Debug.LogError($"[Sampler] WebSocket error: {ex.Message}");
+           //Debug.LogError($"[Sampler] WebSocket error: {ex.GetType().Name}: {ex.Message}\n{ex.StackTrace}");
         }
     }
 
