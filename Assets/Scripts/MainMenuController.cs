@@ -35,6 +35,13 @@ public class MainMenuController : MonoBehaviour
 
         PlayerPrefs.SetInt(UseLiveDataPrefsKey, useLiveData ? 1 : 0);
         PlayerPrefs.Save();
+        Debug.Log($"Toggle isOn: {toggle?.isOn}, Saved value: {PlayerPrefs.GetInt(UseLiveDataPrefsKey)}");
+        StartCoroutine(LoadSceneNextFrame());
+    }
+
+    private System.Collections.IEnumerator LoadSceneNextFrame()
+    {
+        yield return null;
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameSceneName);
     }

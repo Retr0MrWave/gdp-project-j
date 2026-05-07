@@ -1483,7 +1483,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
   gameSceneName: SampleScene
   howToPlayPanel: {fileID: 0}
-  liveModeToggle: {fileID: 0}
+  liveModeToggle: {fileID: 126266508}
 --- !u!4 &2063856386
 Transform:
   m_ObjectHideFlags: 0

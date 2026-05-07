@@ -17,10 +17,6 @@ public class OrderBookWindowController : MonoBehaviour
     [Header("Startup")]
     public bool refreshSourceOnStart = true;
     public bool loadWindowOnStart = true;
-
-
-    [Header("Live Mode")]
-    public bool followTailIfLive = false;
     
     [Header("Scrolling Properties")]
     public float secondsPerTick = 0.05f;
@@ -30,11 +26,21 @@ public class OrderBookWindowController : MonoBehaviour
     private readonly List<OrderBookSnapshot> _buffer = new List<OrderBookSnapshot>();
 
     private OrderBookSourceBehaviour source;
+
+    private const string UseLiveDataPrefsKey = "OrderBookUseLiveData";
     private void Start()
     {
+        if (PlayerPrefs.GetInt(UseLiveDataPrefsKey) == 1)
+        {
+            source = liveSource;
+            Debug.Log("Using Live Data");
+        }
+        else
+        {
+            source = dataSource;
+            Debug.Log("Using Sourced Data");
+        }
 
-        if (true) source = liveSource;
-        else source = dataSource;
         if (source == null || renderer == null)
             return;
 
@@ -54,18 +60,7 @@ public class OrderBookWindowController : MonoBehaviour
             return;
         if (IsMeshReady() == false)
         {
-           //Debug.Log(source.Count);
-            RefreshWindow();
             return;
-        }
-        if (followTailIfLive && source.IsLive)
-        {
-            int tailStart = Mathf.Max(0, source.Count - windowSize);
-            if (tailStart != startIndex)
-            {
-                startIndex = tailStart;
-                RefreshWindow();
-            }
         }
 
         timeDelta += Time.deltaTime;

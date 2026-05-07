@@ -18,7 +18,7 @@ public class LiveOrderBookSource : OrderBookSourceBehaviour
                //Debug.Log("[LiveOrderBookSource] Sampler not yet synced");
                 return 0;
             }
-           //Debug.Log($"[LiveOrderBookSource] Snapshot count: {sampler.SnapshotCount}");
+           Debug.Log($"[LiveOrderBookSource] Snapshot count: {sampler.SnapshotCount}");
             return sampler.SnapshotCount;
         }
     }

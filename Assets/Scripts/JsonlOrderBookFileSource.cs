@@ -18,10 +18,7 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     public PathMode pathMode = PathMode.StreamingAssetsRelativePath;
 
     [Tooltip("Absolute path, or a path relative to StreamingAssets depending on Path Mode.")]
-    public string historyPath = "orderbooks.jsonl";
-
-    [Tooltip("JSONL file to use when live mode is enabled.")]
-    public string liveHistoryPath = "ethusdt_live.jsonl";
+    public string historyPath = "ethusdt_1h.jsonl";
 
     [Tooltip("Build the line-offset index on enable.")]
     public bool buildIndexOnEnable = true;
@@ -31,9 +28,6 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 
     [Header("Refresh Properties")]
     public float sourceRefreshTime = 2.5f;
-
-    [Tooltip("Refresh cadence while live mode is enabled.")]
-    public float liveSourceRefreshTime = 2.5f;
 
     private float timeDelta = 0.0f;
     private bool useLiveData;
@@ -70,14 +64,7 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
 
     private void Update()
     {
-        ApplyModeFromPrefs();
-
-        timeDelta += Time.deltaTime;
-        if (timeDelta >= sourceRefreshTime)
-        {
-            timeDelta -= sourceRefreshTime;
-            RefreshSource();
-        }
+        
     }
 
     [ContextMenu("Refresh Source")]
@@ -218,8 +205,8 @@ public class JsonlOrderBookFileSource : OrderBookSourceBehaviour
     private void ApplyModeFromPrefs()
     {
         useLiveData = PlayerPrefs.GetInt(UseLiveDataPrefsKey, 0) == 1;
-        historyPath = useLiveData ? liveHistoryPath : demoHistoryPath;
-        sourceRefreshTime = useLiveData ? liveSourceRefreshTime : demoSourceRefreshTime;
+        historyPath = demoHistoryPath;
+        sourceRefreshTime = demoSourceRefreshTime;
     }
 
     private FileStream OpenReadStream()
