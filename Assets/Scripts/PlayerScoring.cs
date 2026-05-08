@@ -17,7 +17,7 @@ public class PlayerScoring : MonoBehaviour
 
     public float baseScore = 1.0f; // Score added per second travelled
     public float deviationScore = 1.0f; // Score per unit of deviation from center per second travelled
-    public float centerCoordinate = -10f; // Z-axis coordinate of the center of the cavern
+    public float centerCoordinate = 11.5f; // Y-axis coordinate of the center of the cavern
 
     public float healthLoss = 0.1f; // Health lost per second of touching the mesh
 
@@ -35,7 +35,7 @@ public class PlayerScoring : MonoBehaviour
     {
         if (controller.IsMeshReady() == false)
             return;
-        _score += Time.deltaTime * (baseScore + deviationScore * Mathf.Abs(transform.position.z - centerCoordinate));
+        _score += Time.deltaTime * (baseScore + deviationScore * Mathf.Abs(transform.position.y - centerCoordinate));
         
         Debug.Log("Score: " + Score + "; Health: " + Health);
     }
