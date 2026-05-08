@@ -256,7 +256,7 @@ public class OrderBookHistoryRenderer : MonoBehaviour
                 float y1 = (float)((priceBoundaries[i + 1] - priceOrigin) * priceYScale * (invertPriceAxis ? -1.0 : 1.0));
 
                 int a = vertices.Count;
-                vertices.Add(new Vector3(x, y0, z));
+                vertices.Add(new Vector3(x, z, -y0));
                 uvs.Add(new Vector2(timeCount == 1 ? 0f : t / (float)(timeCount - 1), i / (float)levelCount));
 
                 /*int b = vertices.Count;
@@ -280,10 +280,10 @@ public class OrderBookHistoryRenderer : MonoBehaviour
                 int c = indexMap[t, r + 1];
                 int d = indexMap[t + 1, r + 1];
 
-                float z00 = vertices[a].z;
-                float z10 = vertices[b].z;
-                float z01 = vertices[c].z;
-                float z11 = vertices[d].z;
+                float z00 = vertices[a].y;
+                float z10 = vertices[b].y;
+                float z01 = vertices[c].y;
+                float z11 = vertices[d].y;
 
                 if (z00 <= shapedThreshold &&
                     z10 <= shapedThreshold &&
