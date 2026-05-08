@@ -303,13 +303,23 @@ public class OrderBookHistoryRenderer : MonoBehaviour
 
                 if (doubleSided)
                 {
-                    triangles.Add(a);
-                    triangles.Add(b);
-                    triangles.Add(c);
+                    int a2 = vertices.Count;
+                    vertices.Add(vertices[a]);
+                    vertices.Add(vertices[b]);
+                    vertices.Add(vertices[c]);
+                    vertices.Add(vertices[d]);
+                    uvs.Add(uvs[a]);
+                    uvs.Add(uvs[b]);
+                    uvs.Add(uvs[c]);
+                    uvs.Add(uvs[d]);
 
-                    triangles.Add(b);
-                    triangles.Add(d);
-                    triangles.Add(c);
+                    triangles.Add(a2);
+                    triangles.Add(a2 + 1);
+                    triangles.Add(a2 + 2);
+
+                    triangles.Add(a2 + 1);
+                    triangles.Add(a2 + 3);
+                    triangles.Add(a2 + 2);
                 }
             }
         }
