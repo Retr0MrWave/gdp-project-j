@@ -7,6 +7,8 @@ public class PlayerScoring : MonoBehaviour
     public MeshCollider bidsCollider;
     public MeshCollider asksCollider;
     public OrderBookWindowController controller;
+    public GameEndController gameEndController;
+
 
 
     private float _score;
@@ -46,5 +48,9 @@ public class PlayerScoring : MonoBehaviour
             return;
         if (other == bidsCollider || other == asksCollider)
             _health -= Time.deltaTime * healthLoss;
+        if (_health <= 0.0f)
+        {
+            gameEndController.TriggerGameOver((int)Math.Floor(_score));
+        }
     }
 }
