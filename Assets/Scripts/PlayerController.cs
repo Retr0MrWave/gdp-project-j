@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
         Quaternion rotationTo = Quaternion.Euler(-rotationDirection.y, -90, -rotationDirection.x);
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, rotationTo, rotationSpeed * Time.deltaTime);
+        
+        // Dirty fix
+        transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, -90, transform.rotation.eulerAngles.z);
     }
 
     void FixedUpdate()
