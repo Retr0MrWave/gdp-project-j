@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Git for Unity
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 39
+  controlID: 113
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -77,7 +77,7 @@ MonoBehaviour:
   - {fileID: 13}
   - {fileID: 12}
   m_Selected: 1
-  m_LastSelected: 2
+  m_LastSelected: 0
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
-  - {fileID: 20}
+  - {fileID: 19}
   m_Selected: 0
   m_LastSelected: 1
 --- !u!114 &6
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 40
+  controlID: 41
   draggingID: 0
 --- !u!114 &10
 MonoBehaviour:
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 41
+  controlID: 42
   draggingID: 0
 --- !u!114 &11
 MonoBehaviour:
@@ -275,10 +275,10 @@ MonoBehaviour:
     height: 424.8
   m_MinSize: {x: 202, y: 226}
   m_MaxSize: {x: 4002, y: 4026}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 18}
-  - {fileID: 19}
+  - {fileID: 20}
   m_Selected: 1
   m_LastSelected: 0
 --- !u!114 &12
@@ -443,7 +443,7 @@ MonoBehaviour:
       indexStatus: 0
       workTreeStatus: 3
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2026-05-08T00:18:38.838+01:00
       cacheType: 6
     lastFileLogChangedEvent:
       updatedTimeString: 0001-01-01T00:00:00.000+00:00
@@ -497,8 +497,8 @@ MonoBehaviour:
   currentStatusEntriesHasUpdate: 0
   repositoryProgressHasUpdate: 0
   appManagerProgressHasUpdate: 0
-  changeTab: 3
-  activeTab: 3
+  changeTab: 2
+  activeTab: 2
   initProjectView:
     hasCompletedInitialCheck: 1
     isUserDataPresent: 1
@@ -548,6 +548,16 @@ MonoBehaviour:
         isContainer: 0
         isCollapsed: 0
         isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: better-loading-screen
+        label: better-loading-screen
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
         isActive: 1
         treeIsCheckable: 0
         checkState: 0
@@ -582,8 +592,8 @@ MonoBehaviour:
         treeIsCheckable: 0
         checkState: 0
       selectedNode:
-        path: master
-        label: master
+        path: better-loading-screen
+        label: better-loading-screen
         level: 1
         isFolder: 0
         isContainer: 0
@@ -648,6 +658,26 @@ MonoBehaviour:
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
+      - path: origin/better-loading-screen
+        label: better-loading-screen
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/data-loading
+        label: data-loading
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
       - path: origin/HEAD
         label: HEAD
         level: 2
@@ -658,8 +688,48 @@ MonoBehaviour:
         isActive: 0
         treeIsCheckable: 0
         checkState: 0
+      - path: origin/live-data-performance
+        label: live-data-performance
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/live-mesh-data
+        label: live-mesh-data
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
       - path: origin/master
         label: master
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/menu
+        label: menu
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+      - path: origin/mesh-smoothing
+        label: mesh-smoothing
         level: 2
         isFolder: 0
         isContainer: 0
@@ -725,14 +795,14 @@ MonoBehaviour:
     disableDelete: 1
     disableCreate: 0
     lastLocalAndRemoteBranchListChangedEvent:
-      updatedTimeString: 2026-05-06T16:53:36.030+01:00
+      updatedTimeString: 2026-05-07T20:44:48.016+01:00
       cacheType: 2
     lastCurrentBranchAndRemoteChange:
-      updatedTimeString: 2026-05-06T16:53:32.222+01:00
+      updatedTimeString: 2026-05-07T20:44:48.220+01:00
       cacheType: 1
     currentBranch:
-      name: master
-      tracking: origin/master
+      name: better-loading-screen
+      tracking: origin/better-loading-screen
     currentRemote:
       name: origin
       url: https://github.com/Retr0MrWave/gdp-project-j.git
@@ -744,6 +814,8 @@ MonoBehaviour:
     localBranches:
     - name: master
       tracking: origin/master
+    - name: better-loading-screen
+      tracking: origin/better-loading-screen
     - name: orderbook-controller
       tracking: origin/orderbook-controller
     - name: orderbook-visualisation
@@ -751,9 +823,21 @@ MonoBehaviour:
     - name: UI-development
       tracking: origin/UI-development
     remoteBranches:
+    - name: origin/better-loading-screen
+      tracking: '[None]'
+    - name: origin/data-loading
+      tracking: '[None]'
     - name: origin/HEAD
       tracking: '[None]'
+    - name: origin/live-data-performance
+      tracking: '[None]'
+    - name: origin/live-mesh-data
+      tracking: '[None]'
     - name: origin/master
+      tracking: '[None]'
+    - name: origin/menu
+      tracking: '[None]'
+    - name: origin/mesh-smoothing
       tracking: '[None]'
     - name: origin/orderbook-controller
       tracking: '[None]'
@@ -764,419 +848,20 @@ MonoBehaviour:
     - name: origin/UI-development
       tracking: '[None]'
   changesView:
-    currentBranchHasUpdate: 1
-    currentStatusEntriesHasUpdate: 1
-    currentLocksHasUpdate: 1
+    currentBranchHasUpdate: 0
+    currentStatusEntriesHasUpdate: 0
+    currentLocksHasUpdate: 0
     commitBody: 
     commitMessage: 
-    currentBranch: master
+    currentBranch: better-loading-screen
     treeScroll: {x: 0, y: 0}
     treeChanges:
       assets:
-        keys:
-        - 00000000000000001000000000000000
-        - 74e2f7baabcce1442b9039569dcdd034
-        - b03f64244db254c59917f38045696def
-        - 99c9720ab356a0642a771bea13969a05
-        - 901a3241f5cd2ed479f3184355120aa0
-        - 37bc636d9b23535428185172e196e599
-        - b76bf0f16432db2429f3a0376fc61367
-        - f2fc2a6440acaf543b00a1b806038ada
-        - f7f632940e841024db761a7aa9e8127f
-        - 47fed267893f5e44b929367b7d858137
-        - f4bd04f548647ae4e98b22de43c32d35
-        - ae18d69c6aa3d724bb78a22f59595028
-        - 26618d7bb450e964d891650d1ebd517a
-        values:
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes\Menu.unity
-          label: Menu.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\Menu.unity
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
-            projectPath: Assets\Scenes\Menu.unity
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scenes\SampleScene.unity
-          label: SampleScene.unity
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scenes\SampleScene.unity
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
-            projectPath: Assets\Scenes\SampleScene.unity
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts\HealthBar.cs
-          label: HealthBar.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\HealthBar.cs
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
-            projectPath: Assets\Scripts\HealthBar.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scripts\LiveOrderBookSampler.cs
-          label: LiveOrderBookSampler.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\LiveOrderBookSampler.cs
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
-            projectPath: Assets\Scripts\LiveOrderBookSampler.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Scripts\LoadingScreen.cs
-          label: LoadingScreen.cs
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\LoadingScreen.cs
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
-            projectPath: Assets\Scripts\LoadingScreen.cs
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
-        - path: Assets\Scripts\OrderBookHistoryRenderer.cs
-          label: OrderBookHistoryRenderer.cs
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Scripts\OrderBookHistoryRenderer.cs
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
-            projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\StreamingAssets
-          label: StreamingAssets
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\StreamingAssets\ethusdt_live.jsonl
-          label: ethusdt_live.jsonl
-          level: 2
-          isFolder: 0
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\StreamingAssets\ethusdt_live.jsonl
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
-            projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
-            originalPath: 
-            indexStatus: 3
-            workTreeStatus: 0
-        - path: Assets\Textures
-          label: Textures
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Textures\loading_screen_temp.png
-          label: loading_screen_temp.png
-          level: 2
-          isFolder: 0
-          isContainer: 1
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 1
-          isLocked: 0
-          gitStatusEntry:
-            path: Assets\Textures\loading_screen_temp.png
-            fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
-            projectPath: Assets\Textures\loading_screen_temp.png
-            originalPath: 
-            indexStatus: 4
-            workTreeStatus: 0
+        keys: []
+        values: []
       folders:
-        keys:
-        - .vscode
-        - Assets
-        - Assets\Scenes
-        - Assets\Scripts
-        - Assets\StreamingAssets
-        - Assets\Textures
-        - UserSettings
-        - UserSettings\Layouts
-        values:
-        - path: .vscode
-          label: .vscode
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets
-          label: Assets
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scenes
-          label: Scenes
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Scripts
-          label: Scripts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\StreamingAssets
-          label: StreamingAssets
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: Assets\Textures
-          label: Textures
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings
-          label: UserSettings
-          level: 0
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
-        - path: UserSettings\Layouts
-          label: Layouts
-          level: 1
-          isFolder: 1
-          isContainer: 0
-          isCollapsed: 0
-          isHidden: 0
-          isActive: 0
-          treeIsCheckable: 1
-          checkState: 0
-          isLocked: 0
-          gitStatusEntry:
-            path: 
-            fullPath: 
-            projectPath: 
-            originalPath: 
-            indexStatus: 0
-            workTreeStatus: 0
+        keys: []
+        values: []
       checkedFileNodes:
         keys: []
         values: []
@@ -1205,384 +890,6 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-      - path: .vscode
-        label: .vscode
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: .vscode\settings.json
-        label: settings.json
-        level: 1
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: .vscode\settings.json
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
-          projectPath: .vscode\settings.json
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets
-        label: Assets
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes
-        label: Scenes
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scenes\Menu.unity
-        label: Menu.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\Menu.unity
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
-          projectPath: Assets\Scenes\Menu.unity
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scenes\SampleScene.unity
-        label: SampleScene.unity
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scenes\SampleScene.unity
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
-          projectPath: Assets\Scenes\SampleScene.unity
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scripts
-        label: Scripts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Scripts\HealthBar.cs
-        label: HealthBar.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\HealthBar.cs
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
-          projectPath: Assets\Scripts\HealthBar.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scripts\LiveOrderBookSampler.cs
-        label: LiveOrderBookSampler.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\LiveOrderBookSampler.cs
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
-          projectPath: Assets\Scripts\LiveOrderBookSampler.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Scripts\LoadingScreen.cs
-        label: LoadingScreen.cs
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\LoadingScreen.cs
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
-          projectPath: Assets\Scripts\LoadingScreen.cs
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scripts\LoadingScreen.cs.meta
-        label: LoadingScreen.cs.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\LoadingScreen.cs.meta
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs.meta
-          projectPath: Assets\Scripts\LoadingScreen.cs.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Scripts\OrderBookHistoryRenderer.cs
-        label: OrderBookHistoryRenderer.cs
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Scripts\OrderBookHistoryRenderer.cs
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
-          projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\StreamingAssets
-        label: StreamingAssets
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\StreamingAssets\ethusdt_live.jsonl
-        label: ethusdt_live.jsonl
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\StreamingAssets\ethusdt_live.jsonl
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
-          projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
-          originalPath: 
-          indexStatus: 3
-          workTreeStatus: 0
-      - path: Assets\Textures
-        label: Textures
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: Assets\Textures\loading_screen_temp.png
-        label: loading_screen_temp.png
-        level: 2
-        isFolder: 0
-        isContainer: 1
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Textures\loading_screen_temp.png
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
-          projectPath: Assets\Textures\loading_screen_temp.png
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: Assets\Textures\loading_screen_temp.png.meta
-        label: loading_screen_temp.png.meta
-        level: 3
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: Assets\Textures\loading_screen_temp.png.meta
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
-          projectPath: Assets\Textures\loading_screen_temp.png.meta
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: gdp-project-j-master.slnx
-        label: gdp-project-j-master.slnx
-        level: 0
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 1
-        isLocked: 0
-        gitStatusEntry:
-          path: gdp-project-j-master.slnx
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j-master.slnx
-          projectPath: gdp-project-j-master.slnx
-          originalPath: 
-          indexStatus: 4
-          workTreeStatus: 0
-      - path: UserSettings
-        label: UserSettings
-        level: 0
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts
-        label: Layouts
-        level: 1
-        isFolder: 1
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: 
-          fullPath: 
-          projectPath: 
-          originalPath: 
-          indexStatus: 0
-          workTreeStatus: 0
-      - path: UserSettings\Layouts\default-6000.dwlt
-        label: default-6000.dwlt
-        level: 2
-        isFolder: 0
-        isContainer: 0
-        isCollapsed: 0
-        isHidden: 0
-        isActive: 0
-        treeIsCheckable: 1
-        checkState: 0
-        isLocked: 0
-        gitStatusEntry:
-          path: UserSettings\Layouts\default-6000.dwlt
-          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
-          projectPath: UserSettings\Layouts\default-6000.dwlt
-          originalPath: 
-          indexStatus: 9
-          workTreeStatus: 9
       selectedNode:
         path: 
         label: 
@@ -1602,99 +909,950 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
-    gitStatusEntries:
-    - path: .vscode\settings.json
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
-      projectPath: .vscode\settings.json
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scenes\Menu.unity
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
-      projectPath: Assets\Scenes\Menu.unity
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scenes\SampleScene.unity
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
-      projectPath: Assets\Scenes\SampleScene.unity
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scripts\HealthBar.cs
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
-      projectPath: Assets\Scripts\HealthBar.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scripts\LiveOrderBookSampler.cs
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
-      projectPath: Assets\Scripts\LiveOrderBookSampler.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Scripts\LoadingScreen.cs
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
-      projectPath: Assets\Scripts\LoadingScreen.cs
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scripts\LoadingScreen.cs.meta
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs.meta
-      projectPath: Assets\Scripts\LoadingScreen.cs.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Scripts\OrderBookHistoryRenderer.cs
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
-      projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\StreamingAssets\ethusdt_live.jsonl
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
-      projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
-      originalPath: 
-      indexStatus: 3
-      workTreeStatus: 0
-    - path: Assets\Textures\loading_screen_temp.png
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
-      projectPath: Assets\Textures\loading_screen_temp.png
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: Assets\Textures\loading_screen_temp.png.meta
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
-      projectPath: Assets\Textures\loading_screen_temp.png.meta
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: gdp-project-j-master.slnx
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j-master.slnx
-      projectPath: gdp-project-j-master.slnx
-      originalPath: 
-      indexStatus: 4
-      workTreeStatus: 0
-    - path: UserSettings\Layouts\default-6000.dwlt
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
-      projectPath: UserSettings\Layouts\default-6000.dwlt
-      originalPath: 
-      indexStatus: 9
-      workTreeStatus: 9
-    changedFilesText: 13 changed files
+    gitStatusEntries: []
+    changedFilesText: No changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2026-05-07T23:41:50.941+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2026-05-07T23:41:34.467+01:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 0001-01-01T00:00:00.000+00:00
+      updatedTimeString: 2026-05-07T23:40:11.886+01:00
       cacheType: 7
   historyView:
-    currentLogHasUpdate: 0
-    currentTrackingStatusHasUpdate: 0
+    currentLogHasUpdate: 1
+    currentTrackingStatusHasUpdate: 1
     logEntries:
+    - commitID: 3c1a1a09d9e318b3b4ad59694fb9e7c37777afdd
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Healthbar finally un-aestheticed.
+      description: 
+      timeString: 2026-05-07T23:41:32.000+01:00
+      commitTimeString: 2026-05-07T23:41:32.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\HealthNew.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthNew.cs
+        projectPath: Assets\Scripts\HealthNew.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\HealthNew.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthNew.cs.meta
+        projectPath: Assets\Scripts\HealthNew.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\progress_bar_gradient - Copy.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient
+          - Copy.png
+        projectPath: Assets\Textures\progress_bar_gradient - Copy.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\progress_bar_gradient - Copy.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient
+          - Copy.png.meta
+        projectPath: Assets\Textures\progress_bar_gradient - Copy.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 44b69edc42c5c20237cafd91bbd0778400e9d5b1
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Fixed unlinked objects in LoadingScreen
+      description: 
+      timeString: 2026-05-07T23:20:10.000+01:00
+      commitTimeString: 2026-05-07T23:20:10.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+          SDF.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TextMesh
+          Pro\Examples & Extras\Resources\Fonts & Materials\Anton SDF.asset
+        projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+          SDF.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+          SDF.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TextMesh
+          Pro\Examples & Extras\Resources\Fonts & Materials\Bangers SDF.asset
+        projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+          SDF.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 95903abd65f5d6be8f12d56211fc1451c1b32a76
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Upgraded the Score UI.
+      description: 
+      timeString: 2026-05-07T23:06:27.000+01:00
+      commitTimeString: 2026-05-07T23:06:27.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\Scorenew.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\Scorenew.cs
+        projectPath: Assets\Scripts\Scorenew.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\Scorenew.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\Scorenew.cs.meta
+        projectPath: Assets\Scripts\Scorenew.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TextMesh
+          Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+        projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+          SDF.asset
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 55de90c4cd828032bacc69f6d34d287d12838cfd
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Fixing unlinked objects
+      description: 
+      timeString: 2026-05-07T20:44:24.000+01:00
+      commitTimeString: 2026-05-07T20:44:24.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: a200ade9a41d63b5cc885294432360af721dab82
+      mergeA: 
+      mergeB: 
+      authorName: abcdehello
+      authorEmail: dickson.hoho2@gmail.com
+      commitEmail: dickson.hoho2@gmail.com
+      commitName: abcdehello
+      summary: ' MSPaint loading screen is no more :('
+      description: Better visually but less funny
+      timeString: 2026-05-07T16:15:47.000+01:00
+      commitTimeString: 2026-05-07T16:15:47.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LoadingScreen.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+        projectPath: Assets\Scripts\LoadingScreen.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_stonks.jpg
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_stonks.jpg
+        projectPath: Assets\Textures\loading_screen_stonks.jpg
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_stonks.jpg.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_stonks.jpg.meta
+        projectPath: Assets\Textures\loading_screen_stonks.jpg.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\progress_bar_gradient.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient.png
+        projectPath: Assets\Textures\progress_bar_gradient.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\progress_bar_gradient.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient.png.meta
+        projectPath: Assets\Textures\progress_bar_gradient.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: 25218afeca8eeb5c647f1537f2526fba6bb004d8
+      mergeA: 
+      mergeB: 
+      authorName: abcdehello
+      authorEmail: dickson.hoho2@gmail.com
+      commitEmail: dickson.hoho2@gmail.com
+      commitName: abcdehello
+      summary: Live Mode Toggle Wiring
+      description: Live mode toggle checkbox on menu should now decide which data
+        to render
+      timeString: 2026-05-07T15:44:13.000+01:00
+      commitTimeString: 2026-05-07T15:44:13.000+01:00
+      changes:
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+        projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSource.cs
+        projectPath: Assets\Scripts\LiveOrderBookSource.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\MainMenuController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\MainMenuController.cs
+        projectPath: Assets\Scripts\MainMenuController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookWindowController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+        projectPath: Assets\Scripts\OrderBookWindowController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 5331979ad2c24eae7b77ee09ccbae09c72318a2f
+      mergeA: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+      mergeB: 86121a6c88bd0968918dc9e23d6be7dfb33fae49
+      authorName: abcdehello
+      authorEmail: 38322485+abcdehello@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge pull request #11 from Retr0MrWave/live-data-performance
+      description: Data Transfer Update
+      timeString: 2026-05-07T15:15:50.000+01:00
+      commitTimeString: 2026-05-07T15:15:50.000+01:00
+      changes: []
+    - commitID: 86121a6c88bd0968918dc9e23d6be7dfb33fae49
+      mergeA: 6ed3204ef4f0b2c90b35da143f9c2d9f20adb068
+      mergeB: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+      authorName: abcdehello
+      authorEmail: 38322485+abcdehello@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge branch 'master' into live-data-performance
+      description: 
+      timeString: 2026-05-07T15:15:03.000+01:00
+      commitTimeString: 2026-05-07T15:15:03.000+01:00
+      changes: []
+    - commitID: 6ed3204ef4f0b2c90b35da143f9c2d9f20adb068
+      mergeA: 
+      mergeB: 
+      authorName: abcdehello
+      authorEmail: dickson.hoho2@gmail.com
+      commitEmail: dickson.hoho2@gmail.com
+      commitName: abcdehello
+      summary: Data Transfer Update
+      description: No more file I/O, future (past) support for live dataset toggle
+      timeString: 2026-05-07T15:08:45.000+01:00
+      commitTimeString: 2026-05-07T15:09:40.000+01:00
+      changes:
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+        projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSampler.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+        projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSource.cs
+        projectPath: Assets\Scripts\LiveOrderBookSource.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSource.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSource.cs.meta
+        projectPath: Assets\Scripts\LiveOrderBookSource.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookWindowController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+        projectPath: Assets\Scripts\OrderBookWindowController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+      mergeA: 12bb486b4e350ed672fc98c83a5f8a7639cdad3d
+      mergeB: 6a6a3ceeb93a84977cafb06e6eed3f86ac7c3e9f
+      authorName: Ilia Zhuravok
+      authorEmail: 49455759+Retr0MrWave@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge pull request #10 from Retr0MrWave/menu
+      description: Menu
+      timeString: 2026-05-07T13:55:11.000+01:00
+      commitTimeString: 2026-05-07T13:55:11.000+01:00
+      changes: []
+    - commitID: 12bb486b4e350ed672fc98c83a5f8a7639cdad3d
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Add textures missing from last commit
+      description: 
+      timeString: 2026-05-07T04:12:39.000+01:00
+      commitTimeString: 2026-05-07T04:12:39.000+01:00
+      changes:
+      - path: Assets\Materials\DuctTape.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\DuctTape.mat
+        projectPath: Assets\Materials\DuctTape.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\DuctTape.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\DuctTape.mat.meta
+        projectPath: Assets\Materials\DuctTape.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Marker.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Marker.mat
+        projectPath: Assets\Materials\Marker.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Marker.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Marker.mat.meta
+        projectPath: Assets\Materials\Marker.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Paper.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Paper.mat
+        projectPath: Assets\Materials\Paper.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Paper.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Paper.mat.meta
+        projectPath: Assets\Materials\Paper.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\PinchedMarker.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\PinchedMarker.mat
+        projectPath: Assets\Materials\PinchedMarker.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\PinchedMarker.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\PinchedMarker.mat.meta
+        projectPath: Assets\Materials\PinchedMarker.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Toon.mat
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Toon.mat
+        projectPath: Assets\Materials\Toon.mat
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Materials\Toon.mat.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Toon.mat.meta
+        projectPath: Assets\Materials\Toon.mat.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: a1f7ae16bc62558173cbe968cf5ce11b1641871c
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Add player model with screens for sliceviews
+      description: 
+      timeString: 2026-05-07T04:11:56.000+01:00
+      commitTimeString: 2026-05-07T04:11:56.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 6a6a3ceeb93a84977cafb06e6eed3f86ac7c3e9f
+      mergeA: 
+      mergeB: 
+      authorName: Pui Hei NG
+      authorEmail: duncanhehe@PuideMacBook-Air.local
+      commitEmail: duncanhehe@PuideMacBook-Air.local
+      commitName: Pui Hei NG
+      summary: Update menu
+      description: 
+      timeString: 2026-05-06T21:16:58.000+01:00
+      commitTimeString: 2026-05-06T21:17:51.000+01:00
+      changes:
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 66ab91f0b0610b55febd89900daf4338cf33fd55
+      mergeA: 
+      mergeB: 
+      authorName: Duncan Ng
+      authorEmail: duncan.nph@gmail.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Potential fix for pull request finding
+      description: 'Co-authored-by: Copilot Autofix powered by AI <175728472+Copilot@users.noreply.github.com>'
+      timeString: 2026-05-06T21:07:22.000+01:00
+      commitTimeString: 2026-05-06T21:07:22.000+01:00
+      changes:
+      - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+        projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: d3701a0d73ae518fbf4df5e10f583fa2939d4982
+      mergeA: 
+      mergeB: 
+      authorName: Duncan Ng
+      authorEmail: duncan.nph@gmail.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Potential fix for pull request finding
+      description: 'Co-authored-by: Copilot Autofix powered by AI <175728472+Copilot@users.noreply.github.com>'
+      timeString: 2026-05-06T21:07:02.000+01:00
+      commitTimeString: 2026-05-06T21:07:02.000+01:00
+      changes:
+      - path: Assets\Scripts\MainMenuController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\MainMenuController.cs
+        projectPath: Assets\Scripts\MainMenuController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 97aa4cefed066096140eb4aa415b47d6e19f860d
+      mergeA: 
+      mergeB: 
+      authorName: Pui Hei NG
+      authorEmail: duncanhehe@PuideMacBook-Air.local
+      commitEmail: duncanhehe@PuideMacBook-Air.local
+      commitName: Pui Hei NG
+      summary: Revert "Update project settings and textures"
+      description: This reverts commit 053b8117330a1f9fcef9b650773d14e7a1885d68.
+      timeString: 2026-05-06T20:50:10.000+01:00
+      commitTimeString: 2026-05-06T20:50:10.000+01:00
+      changes:
+      - path: .vscode\settings.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+        projectPath: .vscode\settings.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_green.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png
+        projectPath: Assets\Textures\texture_green.png
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_red.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png
+        projectPath: Assets\Textures\texture_red.png
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: gdp-project-j.slnx
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j.slnx
+        projectPath: gdp-project-j.slnx
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 053b8117330a1f9fcef9b650773d14e7a1885d68
+      mergeA: 
+      mergeB: 
+      authorName: Pui Hei NG
+      authorEmail: duncanhehe@PuideMacBook-Air.local
+      commitEmail: duncanhehe@PuideMacBook-Air.local
+      commitName: Pui Hei NG
+      summary: Update project settings and textures
+      description: 
+      timeString: 2026-05-06T20:43:51.000+01:00
+      commitTimeString: 2026-05-06T20:43:51.000+01:00
+      changes:
+      - path: .vscode\settings.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+        projectPath: .vscode\settings.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_green.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png
+        projectPath: Assets\Textures\texture_green.png
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\texture_red.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png
+        projectPath: Assets\Textures\texture_red.png
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: gdp-project-j.slnx
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j.slnx
+        projectPath: gdp-project-j.slnx
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 28366835ee577f853d88e59101b6076ee5b9bc5e
+      mergeA: 
+      mergeB: 
+      authorName: Pui Hei NG
+      authorEmail: duncanhehe@PuideMacBook-Air.local
+      commitEmail: duncanhehe@PuideMacBook-Air.local
+      commitName: Pui Hei NG
+      summary: Add live mode toggle support
+      description: 
+      timeString: 2026-05-06T20:36:07.000+01:00
+      commitTimeString: 2026-05-06T20:36:07.000+01:00
+      changes:
+      - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+        projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSampler.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+        projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LoadingScreen.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+        projectPath: Assets\Scripts\LoadingScreen.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\MainMenuController.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\MainMenuController.cs
+        projectPath: Assets\Scripts\MainMenuController.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 8e4e5bb7502fe9d324b7178cc96d4943574bd00a
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Slight Improvements to crosssection
+      description: 
+      timeString: 2026-05-06T19:29:46.000+01:00
+      commitTimeString: 2026-05-06T19:29:46.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: bdd50885f3e0758d1b3b9885b5bc9ab51c722094
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: UI Anchor Fix
+      description: 
+      timeString: 2026-05-06T19:23:31.000+01:00
+      commitTimeString: 2026-05-06T19:23:31.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: e6b88c55447849aa3704d0b2a02999a2ca3aafb2
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Nothingburger
+      description: 
+      timeString: 2026-05-06T19:19:50.000+01:00
+      commitTimeString: 2026-05-06T19:19:50.000+01:00
+      changes:
+      - path: .vscode\settings.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+        projectPath: .vscode\settings.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\HealthBar.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
+        projectPath: Assets\Scripts\HealthBar.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSampler.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+        projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LoadingScreen.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+        projectPath: Assets\Scripts\LoadingScreen.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LoadingScreen.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs.meta
+        projectPath: Assets\Scripts\LoadingScreen.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryRenderer.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
+        projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\StreamingAssets\ethusdt_live.jsonl
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
+        projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_temp.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
+        projectPath: Assets\Textures\loading_screen_temp.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_temp.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+        projectPath: Assets\Textures\loading_screen_temp.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: gdp-project-j-master.slnx
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j-master.slnx
+        projectPath: gdp-project-j-master.slnx
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: ee782d74caf2d968d618bd2152ec2e2a1157182a
+      mergeA: 1c2ea6417e4d24c77437a2b0e2e4c8c5a3d0082e
+      mergeB: 9cc226f972e2485eadb36142893f41cc705302b1
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Nothingburger 2
+      description: 
+      timeString: 2026-05-06T19:19:21.000+01:00
+      commitTimeString: 2026-05-06T19:19:21.000+01:00
+      changes: []
+    - commitID: 1c2ea6417e4d24c77437a2b0e2e4c8c5a3d0082e
+      mergeA: 
+      mergeB: 
+      authorName: Totem-101
+      authorEmail: sundaychau0427@gmail.com
+      commitEmail: sundaychau0427@gmail.com
+      commitName: Totem-101
+      summary: Nothingburger
+      description: 
+      timeString: 2026-05-06T16:53:56.000+01:00
+      commitTimeString: 2026-05-06T16:53:56.000+01:00
+      changes:
+      - path: UserSettings\Layouts\default-6000.dwlt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+        projectPath: UserSettings\Layouts\default-6000.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 9cc226f972e2485eadb36142893f41cc705302b1
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Fix healthbar after merge
+      description: 
+      timeString: 2026-05-05T15:51:22.000+01:00
+      commitTimeString: 2026-05-05T15:51:22.000+01:00
+      changes:
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\HealthBar.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
+        projectPath: Assets\Scripts\HealthBar.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_temp.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+        projectPath: Assets\Textures\loading_screen_temp.png.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: bbdb6e327373bb595415683b7deccad225f2d68b
+      mergeA: 
+      mergeB: 
+      authorName: iliaz
+      authorEmail: ilia.zhuravok@gmail.com
+      commitEmail: ilia.zhuravok@gmail.com
+      commitName: iliaz
+      summary: Fix scene merge issues
+      description: 
+      timeString: 2026-05-05T14:34:53.000+01:00
+      commitTimeString: 2026-05-05T14:34:53.000+01:00
+      changes:
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\StreamingAssets\ethusdt_live.jsonl
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
+        projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_temp.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+        projectPath: Assets\Textures\loading_screen_temp.png.meta
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: d7f960875eb9946ba2f5cf1d0677a98707604e5b
+      mergeA: 8d5c1b04e75a149bbb93be935c3bc92621cc51bf
+      mergeB: 5d547a2580dc0698e9f93f9e23ce1ab690f86b3e
+      authorName: Ilia Zhuravok
+      authorEmail: 49455759+Retr0MrWave@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge pull request #6 from Retr0MrWave/data-loading
+      description: Loading Screen & Early Orderbook Fetch
+      timeString: 2026-05-05T14:21:57.000+01:00
+      commitTimeString: 2026-05-05T14:21:57.000+01:00
+      changes: []
+    - commitID: 5d547a2580dc0698e9f93f9e23ce1ab690f86b3e
+      mergeA: 198a1b27c345432cb9fc1f0d51f69fdfe973e158
+      mergeB: 8d5c1b04e75a149bbb93be935c3bc92621cc51bf
+      authorName: Ilia Zhuravok
+      authorEmail: 49455759+Retr0MrWave@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge branch 'master' into data-loading
+      description: 
+      timeString: 2026-05-05T14:21:40.000+01:00
+      commitTimeString: 2026-05-05T14:21:40.000+01:00
+      changes: []
+    - commitID: 8d5c1b04e75a149bbb93be935c3bc92621cc51bf
+      mergeA: faa3200648cb9745ea5ead64be1773d481778aca
+      mergeB: 86bf0efd44ec4bc669c1b7493d87b90fe16ff9a0
+      authorName: "Zo\xEB McGuire"
+      authorEmail: 99346983+ZoeMcG@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge pull request #7 from Retr0MrWave/mesh-smoothing
+      description: Mesh smoothing
+      timeString: 2026-05-05T14:17:58.000+01:00
+      commitTimeString: 2026-05-05T14:17:58.000+01:00
+      changes: []
+    - commitID: 86bf0efd44ec4bc669c1b7493d87b90fe16ff9a0
+      mergeA: 
+      mergeB: 
+      authorName: ZoeMcG
+      authorEmail: zoesmcguire@gmail.com
+      commitEmail: zoesmcguire@gmail.com
+      commitName: ZoeMcG
+      summary: g5rg5g5
+      description: 
+      timeString: 2026-05-05T14:16:40.000+01:00
+      commitTimeString: 2026-05-05T14:16:40.000+01:00
+      changes:
+      - path: UserSettings\Layouts\default-6000.dwlt
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+        projectPath: UserSettings\Layouts\default-6000.dwlt
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+    - commitID: 198a1b27c345432cb9fc1f0d51f69fdfe973e158
+      mergeA: 
+      mergeB: 
+      authorName: abcdehello
+      authorEmail: dickson.hoho2@gmail.com
+      commitEmail: dickson.hoho2@gmail.com
+      commitName: abcdehello
+      summary: Loading Screen & Early Orderbook Fetch
+      description: 
+      timeString: 2026-05-05T02:28:49.000+01:00
+      commitTimeString: 2026-05-05T02:28:49.000+01:00
+      changes:
+      - path: Assets\Scenes\Menu.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+        projectPath: Assets\Scenes\Menu.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scenes\SampleScene.unity
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+        projectPath: Assets\Scenes\SampleScene.unity
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LiveOrderBookSampler.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+        projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\LoadingScreen.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+        projectPath: Assets\Scripts\LoadingScreen.cs
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Scripts\LoadingScreen.cs.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs.meta
+        projectPath: Assets\Scripts\LoadingScreen.cs.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_temp.png
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
+        projectPath: Assets\Textures\loading_screen_temp.png
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+      - path: Assets\Textures\loading_screen_temp.png.meta
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+        projectPath: Assets\Textures\loading_screen_temp.png.meta
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
+    - commitID: ce6225cbb901876fede1fc93bf309b33beb4b119
+      mergeA: 
+      mergeB: 
+      authorName: ZoeMcG
+      authorEmail: zoesmcguire@gmail.com
+      commitEmail: zoesmcguire@gmail.com
+      commitName: ZoeMcG
+      summary: mesh smoothing
+      description: see summary
+      timeString: 2026-05-05T02:19:37.000+01:00
+      commitTimeString: 2026-05-05T02:19:37.000+01:00
+      changes:
+      - path: .vscode\settings.json
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+        projectPath: .vscode\settings.json
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: Assets\Scripts\OrderBookHistoryRenderer.cs
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
+        projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
+        originalPath: 
+        indexStatus: 3
+        workTreeStatus: 0
+      - path: gdp-project-j-master.slnx
+        fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j-master.slnx
+        projectPath: gdp-project-j-master.slnx
+        originalPath: 
+        indexStatus: 4
+        workTreeStatus: 0
     - commitID: faa3200648cb9745ea5ead64be1773d481778aca
       mergeA: 
       mergeB: 
@@ -6269,14 +6427,943 @@ MonoBehaviour:
         workTreeStatus: 0
     statusAhead: 0
     lastLogChangedEvent:
-      updatedTimeString: 2026-05-05T02:12:36.915+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 3
     lastTrackingStatusChangedEvent:
-      updatedTimeString: 2026-05-05T02:12:36.904+01:00
+      updatedTimeString: 0001-01-01T00:00:00.000+00:00
       cacheType: 5
     historyControl:
       scroll: {x: 0, y: 0}
       entries:
+      - commitID: 3c1a1a09d9e318b3b4ad59694fb9e7c37777afdd
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Healthbar finally un-aestheticed.
+        description: 
+        timeString: 2026-05-07T23:41:32.000+01:00
+        commitTimeString: 2026-05-07T23:41:32.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\HealthNew.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthNew.cs
+          projectPath: Assets\Scripts\HealthNew.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\HealthNew.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthNew.cs.meta
+          projectPath: Assets\Scripts\HealthNew.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\progress_bar_gradient - Copy.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient
+            - Copy.png
+          projectPath: Assets\Textures\progress_bar_gradient - Copy.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\progress_bar_gradient - Copy.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient
+            - Copy.png.meta
+          projectPath: Assets\Textures\progress_bar_gradient - Copy.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 44b69edc42c5c20237cafd91bbd0778400e9d5b1
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Fixed unlinked objects in LoadingScreen
+        description: 
+        timeString: 2026-05-07T23:20:10.000+01:00
+        commitTimeString: 2026-05-07T23:20:10.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+            SDF.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TextMesh
+            Pro\Examples & Extras\Resources\Fonts & Materials\Anton SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Anton
+            SDF.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+            SDF.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TextMesh
+            Pro\Examples & Extras\Resources\Fonts & Materials\Bangers SDF.asset
+          projectPath: Assets\TextMesh Pro\Examples & Extras\Resources\Fonts & Materials\Bangers
+            SDF.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 95903abd65f5d6be8f12d56211fc1451c1b32a76
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Upgraded the Score UI.
+        description: 
+        timeString: 2026-05-07T23:06:27.000+01:00
+        commitTimeString: 2026-05-07T23:06:27.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\Scorenew.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\Scorenew.cs
+          projectPath: Assets\Scripts\Scorenew.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\Scorenew.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\Scorenew.cs.meta
+          projectPath: Assets\Scripts\Scorenew.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\TextMesh
+            Pro\Resources\Fonts & Materials\LiberationSans SDF.asset
+          projectPath: Assets\TextMesh Pro\Resources\Fonts & Materials\LiberationSans
+            SDF.asset
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 55de90c4cd828032bacc69f6d34d287d12838cfd
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Fixing unlinked objects
+        description: 
+        timeString: 2026-05-07T20:44:24.000+01:00
+        commitTimeString: 2026-05-07T20:44:24.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: a200ade9a41d63b5cc885294432360af721dab82
+        mergeA: 
+        mergeB: 
+        authorName: abcdehello
+        authorEmail: dickson.hoho2@gmail.com
+        commitEmail: dickson.hoho2@gmail.com
+        commitName: abcdehello
+        summary: ' MSPaint loading screen is no more :('
+        description: Better visually but less funny
+        timeString: 2026-05-07T16:15:47.000+01:00
+        commitTimeString: 2026-05-07T16:15:47.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LoadingScreen.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+          projectPath: Assets\Scripts\LoadingScreen.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_stonks.jpg
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_stonks.jpg
+          projectPath: Assets\Textures\loading_screen_stonks.jpg
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_stonks.jpg.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_stonks.jpg.meta
+          projectPath: Assets\Textures\loading_screen_stonks.jpg.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\progress_bar_gradient.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient.png
+          projectPath: Assets\Textures\progress_bar_gradient.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\progress_bar_gradient.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\progress_bar_gradient.png.meta
+          projectPath: Assets\Textures\progress_bar_gradient.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: 25218afeca8eeb5c647f1537f2526fba6bb004d8
+        mergeA: 
+        mergeB: 
+        authorName: abcdehello
+        authorEmail: dickson.hoho2@gmail.com
+        commitEmail: dickson.hoho2@gmail.com
+        commitName: abcdehello
+        summary: Live Mode Toggle Wiring
+        description: Live mode toggle checkbox on menu should now decide which data
+          to render
+        timeString: 2026-05-07T15:44:13.000+01:00
+        commitTimeString: 2026-05-07T15:44:13.000+01:00
+        changes:
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+          projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSource.cs
+          projectPath: Assets\Scripts\LiveOrderBookSource.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\MainMenuController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\MainMenuController.cs
+          projectPath: Assets\Scripts\MainMenuController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookWindowController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+          projectPath: Assets\Scripts\OrderBookWindowController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 5331979ad2c24eae7b77ee09ccbae09c72318a2f
+        mergeA: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+        mergeB: 86121a6c88bd0968918dc9e23d6be7dfb33fae49
+        authorName: abcdehello
+        authorEmail: 38322485+abcdehello@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge pull request #11 from Retr0MrWave/live-data-performance
+        description: Data Transfer Update
+        timeString: 2026-05-07T15:15:50.000+01:00
+        commitTimeString: 2026-05-07T15:15:50.000+01:00
+        changes: []
+      - commitID: 86121a6c88bd0968918dc9e23d6be7dfb33fae49
+        mergeA: 6ed3204ef4f0b2c90b35da143f9c2d9f20adb068
+        mergeB: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+        authorName: abcdehello
+        authorEmail: 38322485+abcdehello@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge branch 'master' into live-data-performance
+        description: 
+        timeString: 2026-05-07T15:15:03.000+01:00
+        commitTimeString: 2026-05-07T15:15:03.000+01:00
+        changes: []
+      - commitID: 6ed3204ef4f0b2c90b35da143f9c2d9f20adb068
+        mergeA: 
+        mergeB: 
+        authorName: abcdehello
+        authorEmail: dickson.hoho2@gmail.com
+        commitEmail: dickson.hoho2@gmail.com
+        commitName: abcdehello
+        summary: Data Transfer Update
+        description: No more file I/O, future (past) support for live dataset toggle
+        timeString: 2026-05-07T15:08:45.000+01:00
+        commitTimeString: 2026-05-07T15:09:40.000+01:00
+        changes:
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+          projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSampler.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+          projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSource.cs
+          projectPath: Assets\Scripts\LiveOrderBookSource.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSource.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSource.cs.meta
+          projectPath: Assets\Scripts\LiveOrderBookSource.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookWindowController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookWindowController.cs
+          projectPath: Assets\Scripts\OrderBookWindowController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+        mergeA: 12bb486b4e350ed672fc98c83a5f8a7639cdad3d
+        mergeB: 6a6a3ceeb93a84977cafb06e6eed3f86ac7c3e9f
+        authorName: Ilia Zhuravok
+        authorEmail: 49455759+Retr0MrWave@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge pull request #10 from Retr0MrWave/menu
+        description: Menu
+        timeString: 2026-05-07T13:55:11.000+01:00
+        commitTimeString: 2026-05-07T13:55:11.000+01:00
+        changes: []
+      - commitID: 12bb486b4e350ed672fc98c83a5f8a7639cdad3d
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Add textures missing from last commit
+        description: 
+        timeString: 2026-05-07T04:12:39.000+01:00
+        commitTimeString: 2026-05-07T04:12:39.000+01:00
+        changes:
+        - path: Assets\Materials\DuctTape.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\DuctTape.mat
+          projectPath: Assets\Materials\DuctTape.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\DuctTape.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\DuctTape.mat.meta
+          projectPath: Assets\Materials\DuctTape.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Marker.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Marker.mat
+          projectPath: Assets\Materials\Marker.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Marker.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Marker.mat.meta
+          projectPath: Assets\Materials\Marker.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Paper.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Paper.mat
+          projectPath: Assets\Materials\Paper.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Paper.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Paper.mat.meta
+          projectPath: Assets\Materials\Paper.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\PinchedMarker.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\PinchedMarker.mat
+          projectPath: Assets\Materials\PinchedMarker.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\PinchedMarker.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\PinchedMarker.mat.meta
+          projectPath: Assets\Materials\PinchedMarker.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Toon.mat
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Toon.mat
+          projectPath: Assets\Materials\Toon.mat
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Materials\Toon.mat.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Materials\Toon.mat.meta
+          projectPath: Assets\Materials\Toon.mat.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: a1f7ae16bc62558173cbe968cf5ce11b1641871c
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Add player model with screens for sliceviews
+        description: 
+        timeString: 2026-05-07T04:11:56.000+01:00
+        commitTimeString: 2026-05-07T04:11:56.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 6a6a3ceeb93a84977cafb06e6eed3f86ac7c3e9f
+        mergeA: 
+        mergeB: 
+        authorName: Pui Hei NG
+        authorEmail: duncanhehe@PuideMacBook-Air.local
+        commitEmail: duncanhehe@PuideMacBook-Air.local
+        commitName: Pui Hei NG
+        summary: Update menu
+        description: 
+        timeString: 2026-05-06T21:16:58.000+01:00
+        commitTimeString: 2026-05-06T21:17:51.000+01:00
+        changes:
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 66ab91f0b0610b55febd89900daf4338cf33fd55
+        mergeA: 
+        mergeB: 
+        authorName: Duncan Ng
+        authorEmail: duncan.nph@gmail.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Potential fix for pull request finding
+        description: 'Co-authored-by: Copilot Autofix powered by AI <175728472+Copilot@users.noreply.github.com>'
+        timeString: 2026-05-06T21:07:22.000+01:00
+        commitTimeString: 2026-05-06T21:07:22.000+01:00
+        changes:
+        - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+          projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: d3701a0d73ae518fbf4df5e10f583fa2939d4982
+        mergeA: 
+        mergeB: 
+        authorName: Duncan Ng
+        authorEmail: duncan.nph@gmail.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Potential fix for pull request finding
+        description: 'Co-authored-by: Copilot Autofix powered by AI <175728472+Copilot@users.noreply.github.com>'
+        timeString: 2026-05-06T21:07:02.000+01:00
+        commitTimeString: 2026-05-06T21:07:02.000+01:00
+        changes:
+        - path: Assets\Scripts\MainMenuController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\MainMenuController.cs
+          projectPath: Assets\Scripts\MainMenuController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 97aa4cefed066096140eb4aa415b47d6e19f860d
+        mergeA: 
+        mergeB: 
+        authorName: Pui Hei NG
+        authorEmail: duncanhehe@PuideMacBook-Air.local
+        commitEmail: duncanhehe@PuideMacBook-Air.local
+        commitName: Pui Hei NG
+        summary: Revert "Update project settings and textures"
+        description: This reverts commit 053b8117330a1f9fcef9b650773d14e7a1885d68.
+        timeString: 2026-05-06T20:50:10.000+01:00
+        commitTimeString: 2026-05-06T20:50:10.000+01:00
+        changes:
+        - path: .vscode\settings.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+          projectPath: .vscode\settings.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_green.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png
+          projectPath: Assets\Textures\texture_green.png
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_red.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png
+          projectPath: Assets\Textures\texture_red.png
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: gdp-project-j.slnx
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j.slnx
+          projectPath: gdp-project-j.slnx
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 053b8117330a1f9fcef9b650773d14e7a1885d68
+        mergeA: 
+        mergeB: 
+        authorName: Pui Hei NG
+        authorEmail: duncanhehe@PuideMacBook-Air.local
+        commitEmail: duncanhehe@PuideMacBook-Air.local
+        commitName: Pui Hei NG
+        summary: Update project settings and textures
+        description: 
+        timeString: 2026-05-06T20:43:51.000+01:00
+        commitTimeString: 2026-05-06T20:43:51.000+01:00
+        changes:
+        - path: .vscode\settings.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+          projectPath: .vscode\settings.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_green.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_green.png
+          projectPath: Assets\Textures\texture_green.png
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\texture_red.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\texture_red.png
+          projectPath: Assets\Textures\texture_red.png
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: gdp-project-j.slnx
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j.slnx
+          projectPath: gdp-project-j.slnx
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 28366835ee577f853d88e59101b6076ee5b9bc5e
+        mergeA: 
+        mergeB: 
+        authorName: Pui Hei NG
+        authorEmail: duncanhehe@PuideMacBook-Air.local
+        commitEmail: duncanhehe@PuideMacBook-Air.local
+        commitName: Pui Hei NG
+        summary: Add live mode toggle support
+        description: 
+        timeString: 2026-05-06T20:36:07.000+01:00
+        commitTimeString: 2026-05-06T20:36:07.000+01:00
+        changes:
+        - path: Assets\Scripts\JsonlOrderBookFileSource.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\JsonlOrderBookFileSource.cs
+          projectPath: Assets\Scripts\JsonlOrderBookFileSource.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSampler.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+          projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LoadingScreen.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+          projectPath: Assets\Scripts\LoadingScreen.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\MainMenuController.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\MainMenuController.cs
+          projectPath: Assets\Scripts\MainMenuController.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 8e4e5bb7502fe9d324b7178cc96d4943574bd00a
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Slight Improvements to crosssection
+        description: 
+        timeString: 2026-05-06T19:29:46.000+01:00
+        commitTimeString: 2026-05-06T19:29:46.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: bdd50885f3e0758d1b3b9885b5bc9ab51c722094
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: UI Anchor Fix
+        description: 
+        timeString: 2026-05-06T19:23:31.000+01:00
+        commitTimeString: 2026-05-06T19:23:31.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: e6b88c55447849aa3704d0b2a02999a2ca3aafb2
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Nothingburger
+        description: 
+        timeString: 2026-05-06T19:19:50.000+01:00
+        commitTimeString: 2026-05-06T19:19:50.000+01:00
+        changes:
+        - path: .vscode\settings.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+          projectPath: .vscode\settings.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\HealthBar.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
+          projectPath: Assets\Scripts\HealthBar.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSampler.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+          projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LoadingScreen.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+          projectPath: Assets\Scripts\LoadingScreen.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\LoadingScreen.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs.meta
+          projectPath: Assets\Scripts\LoadingScreen.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryRenderer.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
+          projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\StreamingAssets\ethusdt_live.jsonl
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
+          projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_temp.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
+          projectPath: Assets\Textures\loading_screen_temp.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_temp.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+          projectPath: Assets\Textures\loading_screen_temp.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: gdp-project-j-master.slnx
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j-master.slnx
+          projectPath: gdp-project-j-master.slnx
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: ee782d74caf2d968d618bd2152ec2e2a1157182a
+        mergeA: 1c2ea6417e4d24c77437a2b0e2e4c8c5a3d0082e
+        mergeB: 9cc226f972e2485eadb36142893f41cc705302b1
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Nothingburger 2
+        description: 
+        timeString: 2026-05-06T19:19:21.000+01:00
+        commitTimeString: 2026-05-06T19:19:21.000+01:00
+        changes: []
+      - commitID: 1c2ea6417e4d24c77437a2b0e2e4c8c5a3d0082e
+        mergeA: 
+        mergeB: 
+        authorName: Totem-101
+        authorEmail: sundaychau0427@gmail.com
+        commitEmail: sundaychau0427@gmail.com
+        commitName: Totem-101
+        summary: Nothingburger
+        description: 
+        timeString: 2026-05-06T16:53:56.000+01:00
+        commitTimeString: 2026-05-06T16:53:56.000+01:00
+        changes:
+        - path: UserSettings\Layouts\default-6000.dwlt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+          projectPath: UserSettings\Layouts\default-6000.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 9cc226f972e2485eadb36142893f41cc705302b1
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Fix healthbar after merge
+        description: 
+        timeString: 2026-05-05T15:51:22.000+01:00
+        commitTimeString: 2026-05-05T15:51:22.000+01:00
+        changes:
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\HealthBar.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\HealthBar.cs
+          projectPath: Assets\Scripts\HealthBar.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_temp.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+          projectPath: Assets\Textures\loading_screen_temp.png.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: bbdb6e327373bb595415683b7deccad225f2d68b
+        mergeA: 
+        mergeB: 
+        authorName: iliaz
+        authorEmail: ilia.zhuravok@gmail.com
+        commitEmail: ilia.zhuravok@gmail.com
+        commitName: iliaz
+        summary: Fix scene merge issues
+        description: 
+        timeString: 2026-05-05T14:34:53.000+01:00
+        commitTimeString: 2026-05-05T14:34:53.000+01:00
+        changes:
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\StreamingAssets\ethusdt_live.jsonl
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
+          projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_temp.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+          projectPath: Assets\Textures\loading_screen_temp.png.meta
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: d7f960875eb9946ba2f5cf1d0677a98707604e5b
+        mergeA: 8d5c1b04e75a149bbb93be935c3bc92621cc51bf
+        mergeB: 5d547a2580dc0698e9f93f9e23ce1ab690f86b3e
+        authorName: Ilia Zhuravok
+        authorEmail: 49455759+Retr0MrWave@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge pull request #6 from Retr0MrWave/data-loading
+        description: Loading Screen & Early Orderbook Fetch
+        timeString: 2026-05-05T14:21:57.000+01:00
+        commitTimeString: 2026-05-05T14:21:57.000+01:00
+        changes: []
+      - commitID: 5d547a2580dc0698e9f93f9e23ce1ab690f86b3e
+        mergeA: 198a1b27c345432cb9fc1f0d51f69fdfe973e158
+        mergeB: 8d5c1b04e75a149bbb93be935c3bc92621cc51bf
+        authorName: Ilia Zhuravok
+        authorEmail: 49455759+Retr0MrWave@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge branch 'master' into data-loading
+        description: 
+        timeString: 2026-05-05T14:21:40.000+01:00
+        commitTimeString: 2026-05-05T14:21:40.000+01:00
+        changes: []
+      - commitID: 8d5c1b04e75a149bbb93be935c3bc92621cc51bf
+        mergeA: faa3200648cb9745ea5ead64be1773d481778aca
+        mergeB: 86bf0efd44ec4bc669c1b7493d87b90fe16ff9a0
+        authorName: "Zo\xEB McGuire"
+        authorEmail: 99346983+ZoeMcG@users.noreply.github.com
+        commitEmail: noreply@github.com
+        commitName: GitHub
+        summary: Merge pull request #7 from Retr0MrWave/mesh-smoothing
+        description: Mesh smoothing
+        timeString: 2026-05-05T14:17:58.000+01:00
+        commitTimeString: 2026-05-05T14:17:58.000+01:00
+        changes: []
+      - commitID: 86bf0efd44ec4bc669c1b7493d87b90fe16ff9a0
+        mergeA: 
+        mergeB: 
+        authorName: ZoeMcG
+        authorEmail: zoesmcguire@gmail.com
+        commitEmail: zoesmcguire@gmail.com
+        commitName: ZoeMcG
+        summary: g5rg5g5
+        description: 
+        timeString: 2026-05-05T14:16:40.000+01:00
+        commitTimeString: 2026-05-05T14:16:40.000+01:00
+        changes:
+        - path: UserSettings\Layouts\default-6000.dwlt
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\UserSettings\Layouts\default-6000.dwlt
+          projectPath: UserSettings\Layouts\default-6000.dwlt
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+      - commitID: 198a1b27c345432cb9fc1f0d51f69fdfe973e158
+        mergeA: 
+        mergeB: 
+        authorName: abcdehello
+        authorEmail: dickson.hoho2@gmail.com
+        commitEmail: dickson.hoho2@gmail.com
+        commitName: abcdehello
+        summary: Loading Screen & Early Orderbook Fetch
+        description: 
+        timeString: 2026-05-05T02:28:49.000+01:00
+        commitTimeString: 2026-05-05T02:28:49.000+01:00
+        changes:
+        - path: Assets\Scenes\Menu.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\Menu.unity
+          projectPath: Assets\Scenes\Menu.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scenes\SampleScene.unity
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scenes\SampleScene.unity
+          projectPath: Assets\Scenes\SampleScene.unity
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LiveOrderBookSampler.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LiveOrderBookSampler.cs
+          projectPath: Assets\Scripts\LiveOrderBookSampler.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\LoadingScreen.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs
+          projectPath: Assets\Scripts\LoadingScreen.cs
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Scripts\LoadingScreen.cs.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\LoadingScreen.cs.meta
+          projectPath: Assets\Scripts\LoadingScreen.cs.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_temp.png
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png
+          projectPath: Assets\Textures\loading_screen_temp.png
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+        - path: Assets\Textures\loading_screen_temp.png.meta
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Textures\loading_screen_temp.png.meta
+          projectPath: Assets\Textures\loading_screen_temp.png.meta
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
+      - commitID: ce6225cbb901876fede1fc93bf309b33beb4b119
+        mergeA: 
+        mergeB: 
+        authorName: ZoeMcG
+        authorEmail: zoesmcguire@gmail.com
+        commitEmail: zoesmcguire@gmail.com
+        commitName: ZoeMcG
+        summary: mesh smoothing
+        description: see summary
+        timeString: 2026-05-05T02:19:37.000+01:00
+        commitTimeString: 2026-05-05T02:19:37.000+01:00
+        changes:
+        - path: .vscode\settings.json
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\.vscode\settings.json
+          projectPath: .vscode\settings.json
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: Assets\Scripts\OrderBookHistoryRenderer.cs
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\Scripts\OrderBookHistoryRenderer.cs
+          projectPath: Assets\Scripts\OrderBookHistoryRenderer.cs
+          originalPath: 
+          indexStatus: 3
+          workTreeStatus: 0
+        - path: gdp-project-j-master.slnx
+          fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\gdp-project-j-master.slnx
+          projectPath: gdp-project-j-master.slnx
+          originalPath: 
+          indexStatus: 4
+          workTreeStatus: 0
       - commitID: faa3200648cb9745ea5ead64be1773d481778aca
         mergeA: 
         mergeB: 
@@ -10874,19 +11961,19 @@ MonoBehaviour:
           indexStatus: 4
           workTreeStatus: 0
       statusAhead: 0
-      selectedIndex: -1
+      selectedIndex: 6
     selectedEntry:
-      commitID: 
-      mergeA: 
-      mergeB: 
-      authorName: 
-      authorEmail: 
-      commitEmail: 
-      commitName: 
-      summary: 
-      description: 
-      timeString: 0001-01-01T00:00:00.000+00:00
-      commitTimeString: 0001-01-01T00:00:00.000+00:00
+      commitID: 5331979ad2c24eae7b77ee09ccbae09c72318a2f
+      mergeA: 0ede672cdb1ecc349f4930a573f22e9a50c4e083
+      mergeB: 86121a6c88bd0968918dc9e23d6be7dfb33fae49
+      authorName: abcdehello
+      authorEmail: 38322485+abcdehello@users.noreply.github.com
+      commitEmail: noreply@github.com
+      commitName: GitHub
+      summary: Merge pull request #11 from Retr0MrWave/live-data-performance
+      description: Data Transfer Update
+      timeString: 2026-05-07T15:15:50.000+01:00
+      commitTimeString: 2026-05-07T15:15:50.000+01:00
       changes: []
     treeChanges:
       assets:
@@ -10899,12 +11986,30 @@ MonoBehaviour:
         keys: []
         values: []
       title: 
-      pathSeparator: /
+      pathSeparator: \
       displayRootNode: 0
       isSelectable: 1
       isCheckable: 0
       isUsingGlobalSelection: 0
-      nodes: []
+      nodes:
+      - path: 
+        label: 
+        level: -1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 0
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
       selectedNode:
         path: 
         label: 
@@ -10982,22 +12087,16 @@ MonoBehaviour:
         gitFileStatus: 0
         lockedAt: 1 Jan 0001, 00:00
     lastCurrentRemoteChangedEvent:
-      updatedTimeString: 2026-05-05T01:39:19.843+01:00
+      updatedTimeString: 2026-05-07T20:34:00.289+01:00
       cacheType: 1
     lastLocksChangedEvent:
-      updatedTimeString: 2026-05-05T01:40:27.167+01:00
+      updatedTimeString: 2026-05-07T20:35:58.407+01:00
       cacheType: 7
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2026-05-05T01:42:32.961+01:00
+      updatedTimeString: 2026-05-07T20:36:05.480+01:00
       cacheType: 6
     lockedFiles: []
-    gitStatusEntries:
-    - path: Assets\StreamingAssets\ethusdt_live.jsonl
-      fullPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Assets\StreamingAssets\ethusdt_live.jsonl
-      projectPath: Assets\StreamingAssets\ethusdt_live.jsonl
-      originalPath: 
-      indexStatus: 0
-      workTreeStatus: 3
+    gitStatusEntries: []
     currentUsername: 
     unlockFileMenuContent:
       m_Text: Release Lock
@@ -11011,30 +12110,30 @@ MonoBehaviour:
       m_TextWithWhitespace: "Release Lock (forced)\u200B"
   hasRemote: 1
   currentRemoteName: origin
-  currentBranch: master
+  currentBranch: better-loading-screen
   currentRemoteUrl: https://github.com/Retr0MrWave/gdp-project-j.git
-  statusAhead: 1
-  statusBehind: 8
-  hasItemsToCommit: 1
+  statusAhead: 0
+  statusBehind: 0
+  hasItemsToCommit: 0
   isTrackingRemoteBranch: 1
   currentBranchContent:
-    m_Text: master
+    m_Text: better-loading-screen
     m_Image: {fileID: 0}
     m_Tooltip: Active branch
-    m_TextWithWhitespace: "master\u200B"
+    m_TextWithWhitespace: "better-loading-screen\u200B"
   currentRemoteUrlContent:
     m_Text: https://github.com/Retr0MrWave/gdp-project-j.git
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
     m_TextWithWhitespace: "https://github.com/Retr0MrWave/gdp-project-j.git\u200B"
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2026-05-06T16:53:32.222+01:00
+    updatedTimeString: 2026-05-07T23:41:50.941+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2026-05-06T16:54:38.335+01:00
+    updatedTimeString: 2026-05-08T00:18:44.233+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2026-05-06T16:55:26.824+01:00
+    updatedTimeString: 2026-05-08T00:18:38.838+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -11376,7 +12475,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -11386,7 +12485,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project
   m_LockTracker:
@@ -11395,12 +12494,12 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 47542
+    - m_Data: 47684
     m_LastClickedID:
-      m_Data: 47542
+      m_Data: 47684
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 47566
+    - m_Data: 47754
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -11433,7 +12532,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 47566
+    - m_Data: 47754
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -11460,9 +12559,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: []
-    m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs:
+    - m_Data: -39236
+    m_LastClickedInstanceID: -39236
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: []
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -11538,7 +12638,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 216
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -11589,8 +12689,22 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
-      - m_Data: -2496
+      - m_Data: -20894
+      - m_Data: -19492
+      - m_Data: -13216
+      - m_Data: -13214
+      - m_Data: -9148
+      - m_Data: -7792
+      - m_Data: -6078
+      - m_Data: -5932
       - m_Data: -1296
+      - m_Data: 50512
+      - m_Data: 51980
+      - m_Data: 52004
+      - m_Data: 52044
+      - m_Data: 52054
+      - m_Data: 52128
+      - m_Data: 52188
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -12177,19 +13291,19 @@ MonoBehaviour:
   m_OverrideSceneCullingMask: 6917529027641081856
   m_SceneIsLit: 1
   m_SceneLighting: 1
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 416.30252, y: 187.67949, z: 2.2847211}
+    m_Target: {x: -8.838091, y: -0.039537832, z: -8.558257}
     speed: 2
-    m_Value: {x: 416.30252, y: 187.67949, z: 2.2847211}
+    m_Value: {x: -8.838091, y: -0.039537832, z: -8.558257}
   m_RenderMode: 0
   m_CameraMode:
-    drawMode: 1
-    name: Wireframe
+    drawMode: 2
+    name: Shaded Wireframe
     section: Shading Mode
   m_ValidateTrueMetals: 0
   m_DoValidateTrueMetals: 0
@@ -12213,17 +13327,17 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
-        m_Value: 0
+        m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -12231,20 +13345,20 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.010095295, y: 0.68223906, z: -0.009422491, w: -0.731016}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.0100952955, y: 0.6822391, z: -0.009422491, w: -0.731016}
   m_Size:
-    m_Target: 252.38513
+    m_Target: 0.25620988
     speed: 2
-    m_Value: 252.38513
+    m_Value: 0.25620988
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_CameraSettings:
-    m_Speed: 1
-    m_SpeedNormalized: 0.5
+    m_Speed: 1.7201393
+    m_SpeedNormalized: 0.85999966
     m_SpeedMin: 0.001
     m_SpeedMax: 2
     m_EasingEnabled: 1
@@ -12255,7 +13369,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: -0.010095295, y: 0.68223906, z: -0.009422491, w: -0.731016}
   m_LastSceneViewOrtho: 0
   m_Viewpoint:
     m_SceneView: {fileID: 18}
@@ -12272,109 +13386,6 @@ MonoBehaviour:
     section: Lighting
   m_ViewIsLockedToObject: 0
 --- !u!114 &19
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 1
-  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_TitleContent:
-    m_Text: Game
-    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
-    m_Tooltip: 
-    m_TextWithWhitespace: "Game\u200B"
-  m_Pos:
-    serializedVersion: 2
-    x: 289
-    y: 24
-    width: 884.4
-    height: 398.8
-  m_SerializedDataModeController:
-    m_DataMode: 0
-    m_PreferredDataMode: 0
-    m_SupportedDataModes: 
-    isAutomatic: 1
-  m_ViewDataDictionary: {fileID: 0}
-  m_OverlayCanvas:
-    m_LastAppliedPresetName: Default
-    m_SaveData: []
-    m_ContainerData: []
-    m_DynamicPanelContainerData: []
-    m_OverlaysVisible: 1
-    m_DynamicPanelBehavior: 0
-  m_SerializedViewNames: []
-  m_SerializedViewValues: []
-  m_PlayModeViewName: GameView
-  m_ShowGizmos: 0
-  m_TargetDisplay: 0
-  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 884.4, y: 377.8}
-  m_TextureFilterMode: 0
-  m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
-  m_EnterPlayModeBehavior: 0
-  m_UseMipMap: 0
-  m_VSyncEnabled: 0
-  m_Gizmos: 0
-  m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  m_ZoomArea:
-    m_HRangeLocked: 0
-    m_VRangeLocked: 0
-    hZoomLockedByDefault: 0
-    vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -353.76
-    m_HBaseRangeMax: 353.76
-    m_VBaseRangeMin: -151.12
-    m_VBaseRangeMax: 151.12
-    m_HAllowExceedBaseRangeMin: 1
-    m_HAllowExceedBaseRangeMax: 1
-    m_VAllowExceedBaseRangeMin: 1
-    m_VAllowExceedBaseRangeMax: 1
-    m_ScaleWithWindow: 0
-    m_HSlider: 0
-    m_VSlider: 0
-    m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
-    m_EnableSliderZoomHorizontal: 0
-    m_EnableSliderZoomVertical: 0
-    m_UniformScale: 1
-    m_UpDirection: 1
-    m_DrawArea:
-      serializedVersion: 2
-      x: 0
-      y: 21
-      width: 884.4
-      height: 377.8
-    m_Scale: {x: 1.25, y: 1.25}
-    m_Translation: {x: 442.2, y: 188.9}
-    m_MarginLeft: 0
-    m_MarginRight: 0
-    m_MarginTop: 0
-    m_MarginBottom: 0
-    m_LastShownAreaInsideMargins:
-      serializedVersion: 2
-      x: -353.76
-      y: -151.12
-      width: 707.52
-      height: 302.24
-    m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 1105.5, y: 498.5}
-  m_ClearInEditMode: 1
-  m_NoCameraWarning: 1
-  m_LowResolutionForAspectRatios: 01000000000000000000
-  m_XRRenderMode: 0
-  m_RenderTexture: {fileID: 0}
-  m_showToolbar: 1
---- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12412,3 +13423,108 @@ MonoBehaviour:
     m_DynamicPanelContainerData: []
     m_OverlaysVisible: 1
     m_DynamicPanelBehavior: 0
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: 4621777727084837110, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+    m_TextWithWhitespace: "Game\u200B"
+  m_Pos:
+    serializedVersion: 2
+    x: 289
+    y: 24
+    width: 884.4
+    height: 398.8
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_ContainerData: []
+    m_DynamicPanelContainerData: []
+    m_OverlaysVisible: 1
+    m_DynamicPanelBehavior: 0
+  m_SerializedViewNames:
+  - UnityEditor.DeviceSimulation.SimulatorWindow
+  m_SerializedViewValues:
+  - C:\Users\user\Desktop\Unity Projects\gdp-project-j\My project\Library\PlayModeViewStates\51a6363d8f0734a458b9389f39744a6c
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 884.4, y: 377.8}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -353.76
+    m_HBaseRangeMax: 353.76
+    m_VBaseRangeMin: -151.12
+    m_VBaseRangeMax: 151.12
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 1
+    m_VSlider: 1
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 884.4
+      height: 377.8
+    m_Scale: {x: 1.3659084, y: 1.3659084}
+    m_Translation: {x: 428.16116, y: 186.47614}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -313.4626
+      y: -136.5217
+      width: 647.4812
+      height: 276.59247
+    m_MinimalGUI: 1
+  m_defaultScale: 1
+  m_LastWindowPixelSize: {x: 1105.5, y: 498.5}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+  m_showToolbar: 1
