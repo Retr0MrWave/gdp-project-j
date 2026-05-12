@@ -38,6 +38,9 @@ public class OrderBookHistoryRenderer : MonoBehaviour
     public bool doubleSided = true;
     public Material bidMaterial;
     public Material askMaterial;
+    public Material rockMaterial;
+    public Material vaporwareSkybox;
+    public Material regularSkybox;
 
     [Header("Generated Child Names")]
     public string bidsChildName = "Bids Surface";
@@ -195,8 +198,18 @@ public class OrderBookHistoryRenderer : MonoBehaviour
         MeshRenderer bidRenderer = _bidsChild.GetComponent<MeshRenderer>();
         MeshRenderer askRenderer = _asksChild.GetComponent<MeshRenderer>();
 
-        bidRenderer.sharedMaterial = bidMaterial != null ? bidMaterial : GetOrCreateGeneratedMaterial(true);
-        askRenderer.sharedMaterial = askMaterial != null ? askMaterial : GetOrCreateGeneratedMaterial(false);
+        if (PlayerPrefs.HasKey("UseCanyonSkin") && PlayerPrefs.GetInt("UseCanyonSkin") == 1)
+        {
+            bidRenderer.sharedMaterial = rockMaterial;
+            askRenderer.sharedMaterial = rockMaterial;
+            RenderSettings.skybox = regularSkybox;
+        }
+        else
+        {
+            bidRenderer.sharedMaterial = bidMaterial != null ? bidMaterial : GetOrCreateGeneratedMaterial(true);
+            askRenderer.sharedMaterial = askMaterial != null ? askMaterial : GetOrCreateGeneratedMaterial(false);
+            RenderSettings.skybox = vaporwareSkybox;
+        }
     }
 
     private void BuildIntoMesh(

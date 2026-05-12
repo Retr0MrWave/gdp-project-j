@@ -10,6 +10,8 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private Toggle liveModeToggle;
     private Toggle cachedLiveModeToggle;
 
+    public Dropdown worldSkin;
+
     private Toggle GetLiveModeToggle()
     {
         if (liveModeToggle != null)
@@ -36,6 +38,9 @@ public class MainMenuController : MonoBehaviour
         PlayerPrefs.SetInt(UseLiveDataPrefsKey, useLiveData ? 1 : 0);
         PlayerPrefs.Save();
         Debug.Log($"Toggle isOn: {toggle?.isOn}, Saved value: {PlayerPrefs.GetInt(UseLiveDataPrefsKey)}");
+        
+        PlayerPrefs.SetInt("UseCanyonSkin", worldSkin.value);
+        
         StartCoroutine(LoadSceneNextFrame());
     }
 
