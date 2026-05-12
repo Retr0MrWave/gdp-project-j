@@ -38,6 +38,7 @@ public class PlayerScoring : MonoBehaviour
         if (controller.IsMeshReady() == false)
             return;
         _score += Time.deltaTime * (baseScore + deviationScore * Mathf.Abs(transform.position.y - centerCoordinate));
+        _health -= Time.deltaTime / 60f; // Demo change
         
         Debug.Log("Score: " + Score + "; Health: " + Health);
     }
@@ -48,9 +49,9 @@ public class PlayerScoring : MonoBehaviour
             return;
         if (other == bidsCollider || other == asksCollider)
             _health -= Time.deltaTime * healthLoss;
-        if (_health <= 0.0f)
+        if (Health <= 0.0f)
         {
-            gameEndController.TriggerGameOver((int)Math.Floor(_score));
+            gameEndController.TriggerGameOver(Score);
         }
     }
 }
